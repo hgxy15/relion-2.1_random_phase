@@ -1,0 +1,71 @@
+
+//Modified by Gaoxing for random phase set up.
+void MlOptimiser::setParameterForRandomphase(const std::string &randphaseOpt)
+{
+    std::vector<std::string> colon_split;
+    std::vector<std::string> comma_split;
+    int iteration=1;
+    // The default cycle iteration is 3
+    int cycle_iteration=3; 
+    // The default cycle number is 3
+    int cycle_number=3;
+    // The default random phase resolution will be 100 if not specified.The default random_phase_upper would be 0.1.
+    DOUBLE random_phase_res=100;
+    DOUBLE random_phase_upper=0.1;
+    int total_cycle_iteration = cycle_iteration * cycle_number;
+    int total_iteration=0;
+    splitString(randphaseOpt,":",colon_split,true);
+    for (int i=1;i<=colon_split.size();i++)
+    {
+        // re-initialize the three variables to the default value
+        cycle_iteration=3;
+	cycle_number=3;
+	random_phase_res=100;
+	random_phase_upper=0.1;
+        splitString(colon_split[i-1],",",comma_split,true);
+        if (comma_split.size()>0)
+	{
+	    //set the resolution according to the first member of the comma_split vector
+	    random_phase_res=textToFloat(comma_split[0]);
+	    //random_phase_resolutions_iter[iteration]=comma_split[0];
+	    if (comma_split.size()>1)
+	    {
+	        random_phase_upper=textToFloat(comma_split[1]);
+	        if (comma_split.size()>2)
+	        {
+	            cycle_iteration=textToInteger(comma_split[2]);
+    		    if (comma_split.size()>3)
+		    {
+		        cycle_number=textToInteger(comma_split[3]);
+		    }
+	        }
+	    }
+	}
+	// update the total_cycle_iteation variable
+	// Broadcast the scheduled annealing.
+	std::cout<<cycle_number<<" cycles of annealing with "<<cycle_iteration<<" of iterations per cycle has been scheduled with randomized phase at "<<random_phase_res<<std::endl;
+        total_cycle_iteration=cycle_iteration*cycle_number;
+	total_iteration+=total_cycle_iteration;
+	for (int j=1;j<total_cycle_iteration;j++)
+	{
+	    random_phase_resolutions_iter.push_back(random_phase_res);
+	    random_phase_upper_limit_iter.push_back(random_phase_upper);
+	    if (j%cycle_iteration==1)
+	    {
+	        do_random_phase_iter.push_back(true);
+	    }
+	    else
+	    {
+	        do_random_phase_iter.push_back(false);
+	    }
+	}
+    }
+// To do
+if (total_iteration>nr_iter)
+{
+    nr_iter=total_iteration;
+}
+//nr_iter
+//do_random_phase_iter
+//random_phase_resolutions_iter
+}

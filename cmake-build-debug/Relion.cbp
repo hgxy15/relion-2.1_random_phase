@@ -1,0 +1,2888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Relion"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\tests\;CMake Files\src\;CMake Files\src\apps\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="copy_scripts">
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 copy_scripts"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="star_compare">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_star_compare" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 star_compare"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="star_compare/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_star_compare" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 star_compare/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stack_create">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_stack_create" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 stack_create"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stack_create/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_stack_create" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 stack_create/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_ctffind_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_ctffind_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_ctffind_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_ctffind_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_ctffind_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_ctffind_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_ctffind">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_ctffind" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_ctffind"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_ctffind/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_ctffind" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_ctffind/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="refine_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_refine_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 refine_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="refine_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_refine_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 refine_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="refine">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_refine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 refine"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="refine/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_refine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 refine/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 project"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 project/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="preprocess">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_preprocess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 preprocess"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="preprocess/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_preprocess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 preprocess/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_motioncorr">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_motioncorr" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_motioncorr"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_motioncorr/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_motioncorr" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_motioncorr/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prepare_subtomo">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_prepare_subtomo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 prepare_subtomo"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prepare_subtomo/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_prepare_subtomo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 prepare_subtomo/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="image_handler">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_image_handler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 image_handler"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="image_handler/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_image_handler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 image_handler/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="display">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_display" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 display"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="display/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_display" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 display/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autopick_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_autopick_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 autopick_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autopick_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_autopick_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 autopick_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="reconstruct">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_reconstruct" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 reconstruct"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="reconstruct/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_reconstruct" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 reconstruct/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pipeliner">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_pipeliner" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 pipeliner"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pipeliner/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_pipeliner" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 pipeliner/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autopick">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_autopick" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 autopick"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autopick/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_autopick" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 autopick/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="relion_gpu_util">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/lib/librelion_gpu_util.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 relion_gpu_util"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="relion_gpu_util/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/lib/librelion_gpu_util.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 relion_gpu_util/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ctf_toolbox">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_ctf_toolbox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 ctf_toolbox"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ctf_toolbox/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_ctf_toolbox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 ctf_toolbox/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="localsym_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_localsym_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 localsym_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="localsym_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_localsym_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 localsym_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_motioncorr_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_motioncorr_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_motioncorr_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_motioncorr_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_run_motioncorr_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 run_motioncorr_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="postprocess_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_postprocess_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 postprocess_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="postprocess_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_postprocess_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 postprocess_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_polish">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_polish" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_polish"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_polish/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_polish" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_polish/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="relion_lib">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/lib/librelion_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 relion_lib"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="relion_lib/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/lib/librelion_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 relion_lib/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mask_create">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_mask_create" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 mask_create"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mask_create/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_mask_create" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 mask_create/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_sort_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_sort_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_sort_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_sort_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_sort_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_sort_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="localsym">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_localsym" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 localsym"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="localsym/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_localsym" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 localsym/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_symmetry_expand">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_symmetry_expand" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_symmetry_expand"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_symmetry_expand/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_symmetry_expand" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_symmetry_expand/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="maingui">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_maingui" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 maingui"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="maingui/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_maingui" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 maingui/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_reposition">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_reposition" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_reposition"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_reposition/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_reposition" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_reposition/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="star_combine">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_star_combine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 star_combine"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="star_combine/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_star_combine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 star_combine/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="manualpick">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_manualpick" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 manualpick"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="manualpick/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_manualpick" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 manualpick/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tiltpair_plot">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_tiltpair_plot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 tiltpair_plot"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tiltpair_plot/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_tiltpair_plot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 tiltpair_plot/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helix_toolbox">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_helix_toolbox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 helix_toolbox"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="helix_toolbox/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_helix_toolbox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 helix_toolbox/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_polish_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_polish_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_polish_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_polish_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_polish_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_polish_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_sort">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_sort" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_sort"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="particle_sort/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_particle_sort" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 particle_sort/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="preprocess_mpi">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_preprocess_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 preprocess_mpi"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="preprocess_mpi/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_preprocess_mpi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 preprocess_mpi/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find_tiltpairs">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_find_tiltpairs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 find_tiltpairs"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find_tiltpairs/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_find_tiltpairs" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 find_tiltpairs/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="postprocess">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_postprocess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 postprocess"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="postprocess/fast">
+				<Option output="/software/relion-2.1_gaoxing/cmake-build-debug/bin/relion_postprocess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/software/relion-2.1_gaoxing/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DINSTALL_LIBRARY_DIR=/usr/local/lib/"/>
+					<Add option="-DSOURCE_DIR=/software/relion-2.1_gaoxing/src/"/>
+					<Add option="-DCUDA"/>
+					<Add option="-DHAVE_SINCOS"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/software/relion-2.1_gaoxing"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fftw/include"/>
+					<Add directory="/usr/local/cuda-8.0/include"/>
+					<Add directory="/software/relion-2.1_gaoxing/external/fltk/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.3/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 postprocess/fast"/>
+					<CompileFile command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j16 -f &quot;/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/cuda_kernels/relion_gpu_util_generated_helper.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/relion_gpu_util_generated_cuda_autopicker.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/relion_gpu_util_generated_cuda_backprojector.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/relion_gpu_util_generated_cuda_benchmark_utils.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/relion_gpu_util_generated_cuda_helper_functions.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/relion_gpu_util_generated_cuda_ml_optimiser.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/relion_gpu_util_generated_cuda_projector.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake-build-debug/src/apps/CMakeFiles/relion_gpu_util.dir/__/gpu_utils/relion_gpu_util_generated_cuda_projector_plan.cu.o">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/CPlot2D.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/CPlot2D.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/Healpix_2.15a/cxxutils.cc">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/Healpix_2.15a/cxxutils.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/Healpix_2.15a/healpix_base.cc">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/Healpix_2.15a/healpix_base.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/autopick.cpp">
+			<Option target="autopick"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/autopick_mpi.cpp">
+			<Option target="autopick_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/ctf_toolbox.cpp">
+			<Option target="ctf_toolbox"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/display.cpp">
+			<Option target="display"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/find_tiltpairs.cpp">
+			<Option target="find_tiltpairs"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/helix_toolbox.cpp">
+			<Option target="helix_toolbox"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/image_handler.cpp">
+			<Option target="image_handler"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/localsym.cpp">
+			<Option target="localsym"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/localsym_mpi.cpp">
+			<Option target="localsym_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/maingui.cpp">
+			<Option target="maingui"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/manualpick.cpp">
+			<Option target="manualpick"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/mask_create.cpp">
+			<Option target="mask_create"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/particle_polish.cpp">
+			<Option target="particle_polish"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/particle_polish_mpi.cpp">
+			<Option target="particle_polish_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/particle_reposition.cpp">
+			<Option target="particle_reposition"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/particle_sort.cpp">
+			<Option target="particle_sort"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/particle_sort_mpi.cpp">
+			<Option target="particle_sort_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/particle_symmetry_expand.cpp">
+			<Option target="particle_symmetry_expand"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/pipeliner.cpp">
+			<Option target="pipeliner"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/postprocess.cpp">
+			<Option target="postprocess"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/postprocess_mpi.cpp">
+			<Option target="postprocess_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/prepare_subtomo.cpp">
+			<Option target="prepare_subtomo"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/preprocess.cpp">
+			<Option target="preprocess"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/preprocess_mpi.cpp">
+			<Option target="preprocess_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/project.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/reconstruct.cpp">
+			<Option target="reconstruct"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/refine.cpp">
+			<Option target="refine"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/refine_mpi.cpp">
+			<Option target="refine_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/run_ctffind.cpp">
+			<Option target="run_ctffind"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/run_ctffind_mpi.cpp">
+			<Option target="run_ctffind_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/run_motioncorr.cpp">
+			<Option target="run_motioncorr"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/run_motioncorr_mpi.cpp">
+			<Option target="run_motioncorr_mpi"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/stack_create.cpp">
+			<Option target="stack_create"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/star_combine.cpp">
+			<Option target="star_combine"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/star_compare.cpp">
+			<Option target="star_compare"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/tiltpair_plot.cpp">
+			<Option target="tiltpair_plot"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/args.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/args.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/assembly.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/assembly.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/autopicker.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/autopicker.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/autopicker_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/autopicker_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/backprojector.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/backprojector.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/complex.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/complex.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ctf.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ctf.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ctffind_runner.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ctffind_runner.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ctffind_runner_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ctffind_runner_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/displayer.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/displayer.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/error.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/error.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/euler.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/euler.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/exp_model.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/exp_model.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/fftw.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/fftw.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/filename.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/filename.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/funcs.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/funcs.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gcc_version.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_autopicker.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_autopicker.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_backprojector.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_backprojector.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_benchmark_utils.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_benchmark_utils.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_fft.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_helper_functions.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_kernels/helper.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_mem_utils.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_ml_optimiser.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_ml_optimiser.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_projector.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_projector.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_projector_plan.cu">
+			<Option target="relion_gpu_util"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_projector_plan.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gpu_utils/cuda_settings.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gui_entries.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gui_entries.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gui_jobwindow.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gui_jobwindow.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gui_mainwindow.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/gui_mainwindow.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/healpix_sampling.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/healpix_sampling.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/helix.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/helix.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/image.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/image.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/local_symmetry.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/local_symmetry.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/local_symmetry_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/local_symmetry_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/macros.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/manualpicker.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/manualpicker.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/mask.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/mask.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/matrix1d.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/matrix1d.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/matrix2d.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/matrix2d.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/memory.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/memory.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/metadata_container.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/metadata_container.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/metadata_label.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/metadata_label.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/metadata_table.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/metadata_table.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ml_model.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ml_model.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ml_optimiser.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ml_optimiser.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ml_optimiser_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/ml_optimiser_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/motioncorr_runner.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/motioncorr_runner.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/motioncorr_runner_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/motioncorr_runner_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/multidim_array.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/multidim_array.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/numerical_recipes.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/numerical_recipes.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/parallel.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/parallel.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_polisher.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_polisher.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_polisher_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_polisher_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_sorter.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_sorter.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_sorter_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/particle_sorter_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/pipeline_jobs.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/pipeline_jobs.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/pipeliner.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/pipeliner.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/postprocessing.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/postprocessing.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/preprocessing.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/preprocessing.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/preprocessing_mpi.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/preprocessing_mpi.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/projector.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/projector.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/random_phase.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/random_phase.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/random_phase_test.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/rwIMAGIC.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/rwMRC.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/rwSPIDER.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/strings.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/strings.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/symmetries.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/symmetries.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/tabfuncs.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/tabfuncs.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/time.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/time.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/transformations.cpp">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/transformations.h">
+			<Option target="relion_lib"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake/BuildTypes.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake/BuildFLTK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake/FindFFTW.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/cmake/BuildFFTW.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/tests/RelionTests.cmake">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+		<Unit filename="/software/relion-2.1_gaoxing/src/apps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\apps\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="Relion" targetName="mask_create" />
+      <config projectName="Relion" targetName="refine_mpi" />
+      <config projectName="Relion" targetName="relion_lib" />
+      <config projectName="Relion" targetName="project" />
+      <config projectName="Relion" targetName="star_compare" />
+      <config projectName="Relion" targetName="autopick" />
+      <config projectName="Relion" targetName="relion_gpu_util" />
+      <config projectName="Relion" targetName="manualpick" />
+      <config projectName="Relion" targetName="preprocess_mpi" />
+      <config projectName="Relion" targetName="display" />
+      <config projectName="Relion" targetName="prepare_subtomo" />
+      <config projectName="Relion" targetName="maingui" />
+      <config projectName="Relion" targetName="tiltpair_plot" />
+      <config projectName="Relion" targetName="copy_scripts" />
+      <config projectName="Relion" targetName="reconstruct" />
+      <config projectName="Relion" targetName="refine" />
+      <config projectName="Relion" targetName="autopick_mpi" />
+      <config projectName="Relion" targetName="run_motioncorr" />
+      <config projectName="Relion" targetName="star_combine" />
+      <config projectName="Relion" targetName="particle_sort" />
+      <config projectName="Relion" targetName="preprocess" />
+      <config projectName="Relion" targetName="run_ctffind" />
+      <config projectName="Relion" targetName="ctf_toolbox" />
+      <config projectName="Relion" targetName="particle_symmetry_expand" />
+      <config projectName="Relion" targetName="localsym" />
+      <config projectName="Relion" targetName="localsym_mpi" />
+      <config projectName="Relion" targetName="particle_polish_mpi" />
+      <config projectName="Relion" targetName="find_tiltpairs" />
+      <config projectName="Relion" targetName="particle_sort_mpi" />
+      <config projectName="Relion" targetName="stack_create" />
+      <config projectName="Relion" targetName="postprocess_mpi" />
+      <config projectName="Relion" targetName="run_motioncorr_mpi" />
+      <config projectName="Relion" targetName="helix_toolbox" />
+      <config projectName="Relion" targetName="postprocess" />
+      <config projectName="Relion" targetName="particle_reposition" />
+      <config projectName="Relion" targetName="particle_polish" />
+      <config projectName="Relion" targetName="image_handler" />
+      <config projectName="Relion" targetName="pipeliner" />
+      <config projectName="Relion" targetName="run_ctffind_mpi" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="83e3c3af-86f4-4e2f-90c9-905b3bc8e74e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/AUTHORS" afterPath="$PROJECT_DIR$/AUTHORS" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/COPYING" afterPath="$PROJECT_DIR$/COPYING" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/cmake/BuildFFTW.cmake" afterPath="$PROJECT_DIR$/cmake/BuildFFTW.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake/BuildFLTK.cmake" afterPath="$PROJECT_DIR$/cmake/BuildFLTK.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake/BuildTypes.cmake" afterPath="$PROJECT_DIR$/cmake/BuildTypes.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake/FindFFTW.cmake" afterPath="$PROJECT_DIR$/cmake/FindFFTW.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake/TestX86.c" afterPath="$PROJECT_DIR$/cmake/TestX86.c" />
+      <change beforePath="$PROJECT_DIR$/cmake/fltk-1.3.3.patch" afterPath="$PROJECT_DIR$/cmake/fltk-1.3.3.patch" />
+      <change beforePath="$PROJECT_DIR$/relion.h" afterPath="$PROJECT_DIR$/relion.h" />
+      <change beforePath="$PROJECT_DIR$/src/CPlot2D.cpp" afterPath="$PROJECT_DIR$/src/CPlot2D.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/CPlot2D.h" afterPath="$PROJECT_DIR$/src/CPlot2D.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/NOTES" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/NOTES" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/arr.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/arr.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/cxxutils.cc" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/cxxutils.cc" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/cxxutils.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/cxxutils.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/datatypes.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/datatypes.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/geom_utils.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/geom_utils.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/healpix_base.cc" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/healpix_base.cc" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/healpix_base.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/healpix_base.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/lsconstants.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/lsconstants.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/message_error.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/message_error.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/openmp_support.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/openmp_support.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/pointing.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/pointing.h" />
+      <change beforePath="$PROJECT_DIR$/src/Healpix_2.15a/vec3.h" afterPath="$PROJECT_DIR$/src/Healpix_2.15a/vec3.h" />
+      <change beforePath="$PROJECT_DIR$/src/apps/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/apps/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/src/apps/autopick.cpp" afterPath="$PROJECT_DIR$/src/apps/autopick.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/autopick_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/autopick_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/ctf_toolbox.cpp" afterPath="$PROJECT_DIR$/src/apps/ctf_toolbox.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/display.cpp" afterPath="$PROJECT_DIR$/src/apps/display.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/find_tiltpairs.cpp" afterPath="$PROJECT_DIR$/src/apps/find_tiltpairs.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/helix_toolbox.cpp" afterPath="$PROJECT_DIR$/src/apps/helix_toolbox.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/image_handler.cpp" afterPath="$PROJECT_DIR$/src/apps/image_handler.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/localsym.cpp" afterPath="$PROJECT_DIR$/src/apps/localsym.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/localsym_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/localsym_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/maingui.cpp" afterPath="$PROJECT_DIR$/src/apps/maingui.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/manualpick.cpp" afterPath="$PROJECT_DIR$/src/apps/manualpick.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/mask_create.cpp" afterPath="$PROJECT_DIR$/src/apps/mask_create.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/particle_polish.cpp" afterPath="$PROJECT_DIR$/src/apps/particle_polish.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/particle_polish_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/particle_polish_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/particle_reposition.cpp" afterPath="$PROJECT_DIR$/src/apps/particle_reposition.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/particle_sort.cpp" afterPath="$PROJECT_DIR$/src/apps/particle_sort.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/particle_sort_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/particle_sort_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/particle_symmetry_expand.cpp" afterPath="$PROJECT_DIR$/src/apps/particle_symmetry_expand.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/pipeliner.cpp" afterPath="$PROJECT_DIR$/src/apps/pipeliner.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/postprocess.cpp" afterPath="$PROJECT_DIR$/src/apps/postprocess.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/postprocess_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/postprocess_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/prepare_subtomo.cpp" afterPath="$PROJECT_DIR$/src/apps/prepare_subtomo.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/preprocess.cpp" afterPath="$PROJECT_DIR$/src/apps/preprocess.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/preprocess_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/preprocess_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/project.cpp" afterPath="$PROJECT_DIR$/src/apps/project.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/reconstruct.cpp" afterPath="$PROJECT_DIR$/src/apps/reconstruct.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/refine.cpp" afterPath="$PROJECT_DIR$/src/apps/refine.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/refine_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/refine_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/run_ctffind.cpp" afterPath="$PROJECT_DIR$/src/apps/run_ctffind.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/run_ctffind_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/run_ctffind_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/run_motioncorr.cpp" afterPath="$PROJECT_DIR$/src/apps/run_motioncorr.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/run_motioncorr_mpi.cpp" afterPath="$PROJECT_DIR$/src/apps/run_motioncorr_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/stack_create.cpp" afterPath="$PROJECT_DIR$/src/apps/stack_create.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/star_combine.cpp" afterPath="$PROJECT_DIR$/src/apps/star_combine.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/star_compare.cpp" afterPath="$PROJECT_DIR$/src/apps/star_compare.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/apps/tiltpair_plot.cpp" afterPath="$PROJECT_DIR$/src/apps/tiltpair_plot.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/args.cpp" afterPath="$PROJECT_DIR$/src/args.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/args.h" afterPath="$PROJECT_DIR$/src/args.h" />
+      <change beforePath="$PROJECT_DIR$/src/assembly.cpp" afterPath="$PROJECT_DIR$/src/assembly.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/assembly.h" afterPath="$PROJECT_DIR$/src/assembly.h" />
+      <change beforePath="$PROJECT_DIR$/src/autopicker.cpp" afterPath="$PROJECT_DIR$/src/autopicker.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/autopicker.h" afterPath="$PROJECT_DIR$/src/autopicker.h" />
+      <change beforePath="$PROJECT_DIR$/src/autopicker_mpi.cpp" afterPath="$PROJECT_DIR$/src/autopicker_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/autopicker_mpi.h" afterPath="$PROJECT_DIR$/src/autopicker_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/backprojector.cpp" afterPath="$PROJECT_DIR$/src/backprojector.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/backprojector.h" afterPath="$PROJECT_DIR$/src/backprojector.h" />
+      <change beforePath="$PROJECT_DIR$/src/complex.cpp" afterPath="$PROJECT_DIR$/src/complex.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/complex.h" afterPath="$PROJECT_DIR$/src/complex.h" />
+      <change beforePath="$PROJECT_DIR$/src/ctf.cpp" afterPath="$PROJECT_DIR$/src/ctf.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/ctf.h" afterPath="$PROJECT_DIR$/src/ctf.h" />
+      <change beforePath="$PROJECT_DIR$/src/ctffind_runner.cpp" afterPath="$PROJECT_DIR$/src/ctffind_runner.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/ctffind_runner.h" afterPath="$PROJECT_DIR$/src/ctffind_runner.h" />
+      <change beforePath="$PROJECT_DIR$/src/ctffind_runner_mpi.cpp" afterPath="$PROJECT_DIR$/src/ctffind_runner_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/ctffind_runner_mpi.h" afterPath="$PROJECT_DIR$/src/ctffind_runner_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/displayer.cpp" afterPath="$PROJECT_DIR$/src/displayer.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/displayer.h" afterPath="$PROJECT_DIR$/src/displayer.h" />
+      <change beforePath="$PROJECT_DIR$/src/error.cpp" afterPath="$PROJECT_DIR$/src/error.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/error.h" afterPath="$PROJECT_DIR$/src/error.h" />
+      <change beforePath="$PROJECT_DIR$/src/euler.cpp" afterPath="$PROJECT_DIR$/src/euler.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/euler.h" afterPath="$PROJECT_DIR$/src/euler.h" />
+      <change beforePath="$PROJECT_DIR$/src/exp_model.cpp" afterPath="$PROJECT_DIR$/src/exp_model.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/exp_model.h" afterPath="$PROJECT_DIR$/src/exp_model.h" />
+      <change beforePath="$PROJECT_DIR$/src/fftw.cpp" afterPath="$PROJECT_DIR$/src/fftw.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/fftw.h" afterPath="$PROJECT_DIR$/src/fftw.h" />
+      <change beforePath="$PROJECT_DIR$/src/filename.cpp" afterPath="$PROJECT_DIR$/src/filename.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/filename.h" afterPath="$PROJECT_DIR$/src/filename.h" />
+      <change beforePath="$PROJECT_DIR$/src/funcs.cpp" afterPath="$PROJECT_DIR$/src/funcs.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/funcs.h" afterPath="$PROJECT_DIR$/src/funcs.h" />
+      <change beforePath="$PROJECT_DIR$/src/gcc_version.h" afterPath="$PROJECT_DIR$/src/gcc_version.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_histogram.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_histogram.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_radix_sort_downsweep.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_radix_sort_downsweep.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_radix_sort_upsweep.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_radix_sort_upsweep.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_reduce.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_reduce.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_reduce_by_key.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_reduce_by_key.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_rle.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_rle.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_scan.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_scan.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_segment_fixup.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_segment_fixup.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_select_if.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_select_if.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_spmv_csrt.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_spmv_csrt.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_spmv_orig.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_spmv_orig.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_spmv_row_based.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/agent_spmv_row_based.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/agent/single_pass_scan_operators.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/agent/single_pass_scan_operators.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_adjacent_difference.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_adjacent_difference.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_discontinuity.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_discontinuity.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_exchange.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_exchange.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_histogram.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_histogram.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_load.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_load.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_radix_rank.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_radix_rank.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_radix_sort.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_radix_sort.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_raking_layout.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_raking_layout.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_reduce.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_reduce.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_scan.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_scan.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_shuffle.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_shuffle.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_store.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/block_store.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_histogram_atomic.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_histogram_atomic.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_histogram_sort.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_histogram_sort.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_reduce_raking.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_reduce_raking.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_reduce_raking_commutative_only.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_reduce_raking_commutative_only.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_reduce_warp_reductions.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_reduce_warp_reductions.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_raking.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_raking.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_warp_scans.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_warp_scans.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_warp_scans2.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_warp_scans2.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_warp_scans3.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/block/specializations/block_scan_warp_scans3.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/cub.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/cub.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_histogram.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_histogram.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_partition.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_partition.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_radix_sort.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_radix_sort.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_reduce.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_reduce.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_run_length_encode.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_run_length_encode.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_scan.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_scan.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_segmented_radix_sort.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_segmented_radix_sort.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_segmented_reduce.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_segmented_reduce.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_select.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_select.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_spmv.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/device_spmv.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_histogram.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_histogram.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_radix_sort.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_radix_sort.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_reduce.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_reduce.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_reduce_by_key.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_reduce_by_key.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_rle.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_rle.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_scan.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_scan.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_select_if.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_select_if.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_spmv_csrt.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_spmv_csrt.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_spmv_orig.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_spmv_orig.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_spmv_row_based.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/device/dispatch/dispatch_spmv_row_based.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_barrier.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_barrier.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_even_share.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_even_share.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_mapping.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_mapping.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_queue.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/grid/grid_queue.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/host/mutex.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/host/mutex.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/arg_index_input_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/arg_index_input_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/cache_modified_input_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/cache_modified_input_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/cache_modified_output_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/cache_modified_output_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/constant_input_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/constant_input_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/counting_input_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/counting_input_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/discard_output_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/discard_output_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/tex_obj_input_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/tex_obj_input_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/tex_ref_input_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/tex_ref_input_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/transform_input_iterator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/iterator/transform_input_iterator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_load.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_load.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_operators.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_operators.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_reduce.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_reduce.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_scan.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_scan.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_search.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_search.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_store.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/thread/thread_store.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_allocator.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_allocator.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_arch.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_arch.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_debug.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_debug.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_device.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_device.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_macro.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_macro.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_namespace.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_namespace.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_ptx.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_ptx.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/util_type.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/util_type.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_reduce_shfl.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_reduce_shfl.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_reduce_smem.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_reduce_smem.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_scan_shfl.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_scan_shfl.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_scan_smem.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/warp/specializations/warp_scan_smem.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/warp/warp_reduce.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/warp/warp_reduce.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cub/warp/warp_scan.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cub/warp/warp_scan.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_autopicker.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_autopicker.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_autopicker.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_autopicker.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_backprojector.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_backprojector.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_backprojector.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_backprojector.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_benchmark_utils.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_benchmark_utils.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_benchmark_utils.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_benchmark_utils.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_device_utils.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_device_utils.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_fft.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_fft.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_helper_functions.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_helper_functions.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_helper_functions.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_helper_functions.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/BP.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/BP.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/diff2.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/diff2.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/helper.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/helper.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/helper.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/helper.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/wavg.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_kernels/wavg.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_mem_utils.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_mem_utils.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_ml_optimiser.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_ml_optimiser.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_ml_optimiser.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_ml_optimiser.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_projector.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_projector.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_projector.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_projector.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_projector.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_projector.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_projector_plan.cu" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_projector_plan.cu" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_projector_plan.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_projector_plan.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_settings.h" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_settings.h" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_skunks.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_skunks.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_utils_cub.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_utils_cub.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_utils_stl.cuh" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_utils_stl.cuh" />
+      <change beforePath="$PROJECT_DIR$/src/gpu_utils/cuda_utils_thrust.cuh_temp" afterPath="$PROJECT_DIR$/src/gpu_utils/cuda_utils_thrust.cuh_temp" />
+      <change beforePath="$PROJECT_DIR$/src/gui_background.xpm" afterPath="$PROJECT_DIR$/src/gui_background.xpm" />
+      <change beforePath="$PROJECT_DIR$/src/gui_entries.cpp" afterPath="$PROJECT_DIR$/src/gui_entries.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/gui_entries.h" afterPath="$PROJECT_DIR$/src/gui_entries.h" />
+      <change beforePath="$PROJECT_DIR$/src/gui_jobwindow.cpp" afterPath="$PROJECT_DIR$/src/gui_jobwindow.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/gui_jobwindow.h" afterPath="$PROJECT_DIR$/src/gui_jobwindow.h" />
+      <change beforePath="$PROJECT_DIR$/src/gui_mainwindow.cpp" afterPath="$PROJECT_DIR$/src/gui_mainwindow.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/gui_mainwindow.h" afterPath="$PROJECT_DIR$/src/gui_mainwindow.h" />
+      <change beforePath="$PROJECT_DIR$/src/healpix_sampling.cpp" afterPath="$PROJECT_DIR$/src/healpix_sampling.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/healpix_sampling.h" afterPath="$PROJECT_DIR$/src/healpix_sampling.h" />
+      <change beforePath="$PROJECT_DIR$/src/helix.cpp" afterPath="$PROJECT_DIR$/src/helix.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/helix.h" afterPath="$PROJECT_DIR$/src/helix.h" />
+      <change beforePath="$PROJECT_DIR$/src/image.cpp" afterPath="$PROJECT_DIR$/src/image.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/image.h" afterPath="$PROJECT_DIR$/src/image.h" />
+      <change beforePath="$PROJECT_DIR$/src/local_symmetry.cpp" afterPath="$PROJECT_DIR$/src/local_symmetry.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/local_symmetry.h" afterPath="$PROJECT_DIR$/src/local_symmetry.h" />
+      <change beforePath="$PROJECT_DIR$/src/local_symmetry_mpi.cpp" afterPath="$PROJECT_DIR$/src/local_symmetry_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/local_symmetry_mpi.h" afterPath="$PROJECT_DIR$/src/local_symmetry_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/macros.h" afterPath="$PROJECT_DIR$/src/macros.h" />
+      <change beforePath="$PROJECT_DIR$/src/manualpicker.cpp" afterPath="$PROJECT_DIR$/src/manualpicker.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/manualpicker.h" afterPath="$PROJECT_DIR$/src/manualpicker.h" />
+      <change beforePath="$PROJECT_DIR$/src/mask.cpp" afterPath="$PROJECT_DIR$/src/mask.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/mask.h" afterPath="$PROJECT_DIR$/src/mask.h" />
+      <change beforePath="$PROJECT_DIR$/src/matrix1d.cpp" afterPath="$PROJECT_DIR$/src/matrix1d.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/matrix1d.h" afterPath="$PROJECT_DIR$/src/matrix1d.h" />
+      <change beforePath="$PROJECT_DIR$/src/matrix2d.cpp" afterPath="$PROJECT_DIR$/src/matrix2d.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/matrix2d.h" afterPath="$PROJECT_DIR$/src/matrix2d.h" />
+      <change beforePath="$PROJECT_DIR$/src/memory.cpp" afterPath="$PROJECT_DIR$/src/memory.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/memory.h" afterPath="$PROJECT_DIR$/src/memory.h" />
+      <change beforePath="$PROJECT_DIR$/src/metadata_container.cpp" afterPath="$PROJECT_DIR$/src/metadata_container.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/metadata_container.h" afterPath="$PROJECT_DIR$/src/metadata_container.h" />
+      <change beforePath="$PROJECT_DIR$/src/metadata_label.cpp" afterPath="$PROJECT_DIR$/src/metadata_label.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/metadata_label.h" afterPath="$PROJECT_DIR$/src/metadata_label.h" />
+      <change beforePath="$PROJECT_DIR$/src/metadata_table.cpp" afterPath="$PROJECT_DIR$/src/metadata_table.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/metadata_table.h" afterPath="$PROJECT_DIR$/src/metadata_table.h" />
+      <change beforePath="$PROJECT_DIR$/src/ml_model.cpp" afterPath="$PROJECT_DIR$/src/ml_model.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/ml_model.h" afterPath="$PROJECT_DIR$/src/ml_model.h" />
+      <change beforePath="$PROJECT_DIR$/src/ml_optimiser.cpp" afterPath="$PROJECT_DIR$/src/ml_optimiser.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/ml_optimiser.h" afterPath="$PROJECT_DIR$/src/ml_optimiser.h" />
+      <change beforePath="$PROJECT_DIR$/src/ml_optimiser_mpi.cpp" afterPath="$PROJECT_DIR$/src/ml_optimiser_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/ml_optimiser_mpi.h" afterPath="$PROJECT_DIR$/src/ml_optimiser_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/motioncorr_runner.cpp" afterPath="$PROJECT_DIR$/src/motioncorr_runner.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/motioncorr_runner.h" afterPath="$PROJECT_DIR$/src/motioncorr_runner.h" />
+      <change beforePath="$PROJECT_DIR$/src/motioncorr_runner_mpi.cpp" afterPath="$PROJECT_DIR$/src/motioncorr_runner_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/motioncorr_runner_mpi.h" afterPath="$PROJECT_DIR$/src/motioncorr_runner_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/mpi.cpp" afterPath="$PROJECT_DIR$/src/mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/mpi.h" afterPath="$PROJECT_DIR$/src/mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/multidim_array.cpp" afterPath="$PROJECT_DIR$/src/multidim_array.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/multidim_array.h" afterPath="$PROJECT_DIR$/src/multidim_array.h" />
+      <change beforePath="$PROJECT_DIR$/src/numerical_recipes.cpp" afterPath="$PROJECT_DIR$/src/numerical_recipes.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/numerical_recipes.h" afterPath="$PROJECT_DIR$/src/numerical_recipes.h" />
+      <change beforePath="$PROJECT_DIR$/src/parallel.cpp" afterPath="$PROJECT_DIR$/src/parallel.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/parallel.h" afterPath="$PROJECT_DIR$/src/parallel.h" />
+      <change beforePath="$PROJECT_DIR$/src/particle_polisher.cpp" afterPath="$PROJECT_DIR$/src/particle_polisher.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/particle_polisher.h" afterPath="$PROJECT_DIR$/src/particle_polisher.h" />
+      <change beforePath="$PROJECT_DIR$/src/particle_polisher_mpi.cpp" afterPath="$PROJECT_DIR$/src/particle_polisher_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/particle_polisher_mpi.h" afterPath="$PROJECT_DIR$/src/particle_polisher_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/particle_sorter.cpp" afterPath="$PROJECT_DIR$/src/particle_sorter.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/particle_sorter.h" afterPath="$PROJECT_DIR$/src/particle_sorter.h" />
+      <change beforePath="$PROJECT_DIR$/src/particle_sorter_mpi.cpp" afterPath="$PROJECT_DIR$/src/particle_sorter_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/particle_sorter_mpi.h" afterPath="$PROJECT_DIR$/src/particle_sorter_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/pipeline_jobs.cpp" afterPath="$PROJECT_DIR$/src/pipeline_jobs.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/pipeline_jobs.h" afterPath="$PROJECT_DIR$/src/pipeline_jobs.h" />
+      <change beforePath="$PROJECT_DIR$/src/pipeliner.cpp" afterPath="$PROJECT_DIR$/src/pipeliner.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/pipeliner.h" afterPath="$PROJECT_DIR$/src/pipeliner.h" />
+      <change beforePath="$PROJECT_DIR$/src/postprocessing.cpp" afterPath="$PROJECT_DIR$/src/postprocessing.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/postprocessing.h" afterPath="$PROJECT_DIR$/src/postprocessing.h" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing.cpp" afterPath="$PROJECT_DIR$/src/preprocessing.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing.h" afterPath="$PROJECT_DIR$/src/preprocessing.h" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing_mpi.cpp" afterPath="$PROJECT_DIR$/src/preprocessing_mpi.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing_mpi.h" afterPath="$PROJECT_DIR$/src/preprocessing_mpi.h" />
+      <change beforePath="$PROJECT_DIR$/src/projector.cpp" afterPath="$PROJECT_DIR$/src/projector.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/projector.h" afterPath="$PROJECT_DIR$/src/projector.h" />
+      <change beforePath="$PROJECT_DIR$/src/rwIMAGIC.h" afterPath="$PROJECT_DIR$/src/rwIMAGIC.h" />
+      <change beforePath="$PROJECT_DIR$/src/rwMRC.h" afterPath="$PROJECT_DIR$/src/rwMRC.h" />
+      <change beforePath="$PROJECT_DIR$/src/rwSPIDER.h" afterPath="$PROJECT_DIR$/src/rwSPIDER.h" />
+      <change beforePath="$PROJECT_DIR$/src/strings.cpp" afterPath="$PROJECT_DIR$/src/strings.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/strings.h" afterPath="$PROJECT_DIR$/src/strings.h" />
+      <change beforePath="$PROJECT_DIR$/src/symmetries.cpp" afterPath="$PROJECT_DIR$/src/symmetries.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/symmetries.h" afterPath="$PROJECT_DIR$/src/symmetries.h" />
+      <change beforePath="$PROJECT_DIR$/src/tabfuncs.cpp" afterPath="$PROJECT_DIR$/src/tabfuncs.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/tabfuncs.h" afterPath="$PROJECT_DIR$/src/tabfuncs.h" />
+      <change beforePath="$PROJECT_DIR$/src/time.cpp" afterPath="$PROJECT_DIR$/src/time.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/time.h" afterPath="$PROJECT_DIR$/src/time.h" />
+      <change beforePath="$PROJECT_DIR$/src/transformations.cpp" afterPath="$PROJECT_DIR$/src/transformations.cpp" />
+      <change beforePath="$PROJECT_DIR$/src/transformations.h" afterPath="$PROJECT_DIR$/src/transformations.h" />
+      <change beforePath="$PROJECT_DIR$/tests/RelionTests.cmake" afterPath="$PROJECT_DIR$/tests/RelionTests.cmake" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="srs.xbm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/external/fltk/fltk/test/pixmaps/srs.xbm">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random_phase.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/random_phase.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1215">
+              <caret line="91" column="100" lean-forward="false" selection-start-line="91" selection-start-column="100" selection-end-line="91" selection-end-column="100" />
+              <folding>
+                <element signature="e#4957#4969#0" expanded="true" />
+                <element signature="e#10045#10057#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random_phase.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/random_phase.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="596" column="91" lean-forward="false" selection-start-line="596" selection-start-column="0" selection-end-line="596" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random_phase_test.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/random_phase_test.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2466">
+              <caret line="142" column="49" lean-forward="true" selection-start-line="142" selection-start-column="49" selection-end-line="142" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>template</find>
+      <find>templat</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/random_phase.cpp" />
+        <option value="$PROJECT_DIR$/src/random_phase.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="2257" />
+    <option name="y" value="160" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/random_phase_test.cpp" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.autopick">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="autopick" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="autopick" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="autopick">
+      <envs />
+    </configuration>
+    <configuration name="autopick_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="autopick_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="autopick_mpi">
+      <envs />
+    </configuration>
+    <configuration name="copy_scripts" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="copy_scripts" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="ctf_toolbox" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="ctf_toolbox" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="ctf_toolbox">
+      <envs />
+    </configuration>
+    <configuration name="display" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="display" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="display">
+      <envs />
+    </configuration>
+    <configuration name="find_tiltpairs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="find_tiltpairs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="find_tiltpairs">
+      <envs />
+    </configuration>
+    <configuration name="helix_toolbox" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="helix_toolbox" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="helix_toolbox">
+      <envs />
+    </configuration>
+    <configuration name="image_handler" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="image_handler" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="image_handler">
+      <envs />
+    </configuration>
+    <configuration name="localsym" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="localsym" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="localsym">
+      <envs />
+    </configuration>
+    <configuration name="localsym_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="localsym_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="localsym_mpi">
+      <envs />
+    </configuration>
+    <configuration name="maingui" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="maingui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="maingui">
+      <envs />
+    </configuration>
+    <configuration name="manualpick" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="manualpick" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="manualpick">
+      <envs />
+    </configuration>
+    <configuration name="mask_create" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="mask_create" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="mask_create">
+      <envs />
+    </configuration>
+    <configuration name="particle_polish" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="particle_polish" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="particle_polish">
+      <envs />
+    </configuration>
+    <configuration name="particle_polish_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="particle_polish_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="particle_polish_mpi">
+      <envs />
+    </configuration>
+    <configuration name="particle_reposition" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="particle_reposition" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="particle_reposition">
+      <envs />
+    </configuration>
+    <configuration name="particle_sort" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="particle_sort" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="particle_sort">
+      <envs />
+    </configuration>
+    <configuration name="particle_sort_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="particle_sort_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="particle_sort_mpi">
+      <envs />
+    </configuration>
+    <configuration name="particle_symmetry_expand" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="particle_symmetry_expand" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="particle_symmetry_expand">
+      <envs />
+    </configuration>
+    <configuration name="pipeliner" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="pipeliner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="pipeliner">
+      <envs />
+    </configuration>
+    <configuration name="postprocess" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="postprocess" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="postprocess">
+      <envs />
+    </configuration>
+    <configuration name="postprocess_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="postprocess_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="postprocess_mpi">
+      <envs />
+    </configuration>
+    <configuration name="prepare_subtomo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="prepare_subtomo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="prepare_subtomo">
+      <envs />
+    </configuration>
+    <configuration name="preprocess" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="preprocess" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="preprocess">
+      <envs />
+    </configuration>
+    <configuration name="preprocess_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="preprocess_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="preprocess_mpi">
+      <envs />
+    </configuration>
+    <configuration name="project" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="project">
+      <envs />
+    </configuration>
+    <configuration name="reconstruct" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="reconstruct" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="reconstruct">
+      <envs />
+    </configuration>
+    <configuration name="refine" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="refine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="refine">
+      <envs />
+    </configuration>
+    <configuration name="refine_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="refine_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="refine_mpi">
+      <envs />
+    </configuration>
+    <configuration name="relion_gpu_util" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="relion_gpu_util" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="relion_lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="relion_lib" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="run_ctffind" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="run_ctffind" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="run_ctffind">
+      <envs />
+    </configuration>
+    <configuration name="run_ctffind_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="run_ctffind_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="run_ctffind_mpi">
+      <envs />
+    </configuration>
+    <configuration name="run_motioncorr" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="run_motioncorr" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="run_motioncorr">
+      <envs />
+    </configuration>
+    <configuration name="run_motioncorr_mpi" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="run_motioncorr_mpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="run_motioncorr_mpi">
+      <envs />
+    </configuration>
+    <configuration name="stack_create" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="stack_create" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="stack_create">
+      <envs />
+    </configuration>
+    <configuration name="star_combine" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="star_combine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="star_combine">
+      <envs />
+    </configuration>
+    <configuration name="star_compare" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="star_compare" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="star_compare">
+      <envs />
+    </configuration>
+    <configuration name="tiltpair_plot" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Relion" TARGET_NAME="tiltpair_plot" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Relion" RUN_TARGET_NAME="tiltpair_plot">
+      <envs />
+    </configuration>
+    <list size="40">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.copy_scripts" />
+      <item index="2" class="java.lang.String" itemvalue="Application.autopick" />
+      <item index="3" class="java.lang.String" itemvalue="Application.autopick_mpi" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ctf_toolbox" />
+      <item index="5" class="java.lang.String" itemvalue="Application.display" />
+      <item index="6" class="java.lang.String" itemvalue="Application.find_tiltpairs" />
+      <item index="7" class="java.lang.String" itemvalue="Application.helix_toolbox" />
+      <item index="8" class="java.lang.String" itemvalue="Application.image_handler" />
+      <item index="9" class="java.lang.String" itemvalue="Application.localsym" />
+      <item index="10" class="java.lang.String" itemvalue="Application.localsym_mpi" />
+      <item index="11" class="java.lang.String" itemvalue="Application.maingui" />
+      <item index="12" class="java.lang.String" itemvalue="Application.manualpick" />
+      <item index="13" class="java.lang.String" itemvalue="Application.mask_create" />
+      <item index="14" class="java.lang.String" itemvalue="Application.particle_polish" />
+      <item index="15" class="java.lang.String" itemvalue="Application.particle_polish_mpi" />
+      <item index="16" class="java.lang.String" itemvalue="Application.particle_reposition" />
+      <item index="17" class="java.lang.String" itemvalue="Application.particle_sort" />
+      <item index="18" class="java.lang.String" itemvalue="Application.particle_sort_mpi" />
+      <item index="19" class="java.lang.String" itemvalue="Application.particle_symmetry_expand" />
+      <item index="20" class="java.lang.String" itemvalue="Application.pipeliner" />
+      <item index="21" class="java.lang.String" itemvalue="Application.postprocess" />
+      <item index="22" class="java.lang.String" itemvalue="Application.postprocess_mpi" />
+      <item index="23" class="java.lang.String" itemvalue="Application.prepare_subtomo" />
+      <item index="24" class="java.lang.String" itemvalue="Application.preprocess" />
+      <item index="25" class="java.lang.String" itemvalue="Application.preprocess_mpi" />
+      <item index="26" class="java.lang.String" itemvalue="Application.project" />
+      <item index="27" class="java.lang.String" itemvalue="Application.reconstruct" />
+      <item index="28" class="java.lang.String" itemvalue="Application.refine" />
+      <item index="29" class="java.lang.String" itemvalue="Application.refine_mpi" />
+      <item index="30" class="java.lang.String" itemvalue="Application.relion_gpu_util" />
+      <item index="31" class="java.lang.String" itemvalue="Application.relion_lib" />
+      <item index="32" class="java.lang.String" itemvalue="Application.run_ctffind" />
+      <item index="33" class="java.lang.String" itemvalue="Application.run_ctffind_mpi" />
+      <item index="34" class="java.lang.String" itemvalue="Application.run_motioncorr" />
+      <item index="35" class="java.lang.String" itemvalue="Application.run_motioncorr_mpi" />
+      <item index="36" class="java.lang.String" itemvalue="Application.stack_create" />
+      <item index="37" class="java.lang.String" itemvalue="Application.star_combine" />
+      <item index="38" class="java.lang.String" itemvalue="Application.star_compare" />
+      <item index="39" class="java.lang.String" itemvalue="Application.tiltpair_plot" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83e3c3af-86f4-4e2f-90c9-905b3bc8e74e" name="Default" comment="" />
+      <created>1514873092826</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514873092826</updated>
+      <workItem from="1514873094066" duration="2502000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2502000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1919" y="0" width="1922" height="1201" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299539" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/external/fltk/fltk/test/pixmaps/srs.xbm">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/random_phase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1215">
+          <caret line="91" column="100" lean-forward="false" selection-start-line="91" selection-start-column="100" selection-end-line="91" selection-end-column="100" />
+          <folding>
+            <element signature="e#4957#4969#0" expanded="true" />
+            <element signature="e#10045#10057#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/random_phase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="596" column="91" lean-forward="false" selection-start-line="596" selection-start-column="0" selection-end-line="596" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_phase_test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2466">
+          <caret line="142" column="49" lean-forward="true" selection-start-line="142" selection-start-column="49" selection-end-line="142" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
