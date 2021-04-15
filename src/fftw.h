@@ -370,9 +370,14 @@ void randomizePhasesBeyond(MultidimArray<RFLOAT> &I, int index);
 //Modified by ZhouQ and Gaoxing for Randomize phases beyond the given shell (index) with a given amplitude (in units of 2pi)
 void randomizePhasesBeyond(MultidimArray<RFLOAT> &I, int index, int index_upper, RFLOAT amplitude);
 
+//Modified by Gaoxing for Randomize phases beyond the given shell (index) with a given amplitude (in units of 2pi)
+void randomizePhasesBeyondInMask(MultidimArray<RFLOAT> &v, MultidimArray<RFLOAT> &m, int index, int index_upper, RFLOAT amplitude);
+
+//Modified by Gaoxing for Randomize phases beyond the given shell (index) with a given amplitude (in units of 2pi)
+void randomizePhasesBeyondOutMask(MultidimArray<RFLOAT> &v, MultidimArray<RFLOAT> &m, int index, int index_upper, RFLOAT amplitude, RFLOAT scale = 1);
 
 // Modified by Gaoxing for Randomize phases beyond the given shell (index) with a given amplitude and a randomization spectrum with the largest value normalized to 1.
-void randomizePhasesBeyond_1DSpectrum(MultidimArray<RFLOAT> &I, int index, int index_upper, RFLOAT randomize_amplitude, std::vector<RFLOAT> &normalized_spectrum );
+void randomizePhasesBeyond_1DSpectrum(MultidimArray<RFLOAT> &I, int index, int index_upper, RFLOAT amplitude, MultidimArray<RFLOAT> &normalized_spectrum );
 
 /** Center an array, to have its origin at the origin of the FFTW
  *

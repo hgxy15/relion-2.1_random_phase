@@ -45,6 +45,7 @@
 
 #include "src/macros.h"
 #include "src/fftw.h"
+#include "src/multidim_array.h"
 #include "src/args.h"
 #include <string.h>
 #include <math.h>
@@ -456,7 +457,7 @@ void randomizePhasesBeyond(MultidimArray<RFLOAT> &v, int index, int index_upper,
     	if (p2 >= index2 && p2 <= index_upper2)
     	{
     		RFLOAT mag = abs(DIRECT_A3D_ELEM(FT, k, i, j));
-    		RFLOAT ini_phas = DIRECT_A3D_ELEM(FT, k, i, j).imag;
+    		RFLOAT ini_phas = (atan2((DIRECT_A3D_ELEM(FT, k, i, j)).imag, (DIRECT_A3D_ELEM(FT, k, i, j)).real));
     		RFLOAT add_phas = amplitude * rnd_unif(-PI, PI);
     		RFLOAT phas = ini_phas + add_phas;
                 if (phas < 0)
@@ -474,8 +475,132 @@ void randomizePhasesBeyond(MultidimArray<RFLOAT> &v, int index, int index_upper,
 
 }
 //TODO
+
 // Modified by Gaoxing for Randomize phases beyond the given shell (index) with a given amplitude and a randomization spectrum with the largest value normalized to 1.
-//void randomizePhasesBeyond_1DSpectrum(MultidimArray<RFLOAT> &I, int index, int index_upper, RFLOAT randomize_amplitude, std::vector<RFLOAT> &normalized_spectrum );
+void randomizePhasesBeyondInMask(MultidimArray<RFLOAT> &v, MultidimArray<RFLOAT> &m, int index, int index_upper, RFLOAT amplitude)
+{
+    //Seperate into two parts, in the mask and outside the mask.
+    MultidimArray< RFLOAT > Masked(v, true);
+    MultidimArray< RFLOAT > Masked_out(v, true);
+    MultidimArray< Complex > FT_masked;
+    FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(v){
+        DIRECT_MULTIDIM_ELEM(Masked, n) = DIRECT_MULTIDIM_ELEM(v, n) * DIRECT_MULTIDIM_ELEM(m, n);
+        DIRECT_MULTIDIM_ELEM(Masked_out, n) = DIRECT_MULTIDIM_ELEM(v, n) - DIRECT_MULTIDIM_ELEM(Masked, n);
+    }
+
+    FourierTransformer transformer;
+    transformer.FourierTransform(Masked, FT_masked, false);
+
+    int index2 = index * index;
+    int index_upper2 = index_upper * index_upper;
+    FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(FT_masked)
+    {
+        RFLOAT p2 = kp * kp + ip * ip + jp * jp;
+    	if (p2 >= index2 && p2 <= index_upper2)
+    	{
+    		RFLOAT mag = abs(DIRECT_A3D_ELEM(FT_masked, k, i, j));
+    		RFLOAT ini_phas = (atan2((DIRECT_A3D_ELEM(FT_masked, k, i, j)).imag, (DIRECT_A3D_ELEM(FT_masked, k, i, j)).real));
+    		RFLOAT add_phas = amplitude * rnd_unif(-PI, PI);
+    		RFLOAT phas = ini_phas + add_phas;
+                if (phas < 0)
+		{
+		    phas += (2*PI);
+		}
+    		RFLOAT realval = mag * cos(phas);
+    		RFLOAT imagval = mag * sin(phas);
+    		DIRECT_A3D_ELEM(FT_masked, k, i, j) = Complex(realval, imagval);
+    	}
+    }
+
+    // Inverse transform
+    transformer.inverseFourierTransform();
+    FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(v){
+        DIRECT_MULTIDIM_ELEM(v, n) = DIRECT_MULTIDIM_ELEM(Masked, n) + DIRECT_MULTIDIM_ELEM(Masked_out, n);
+    }
+}
+
+// Modified by Gaoxing for Randomize phases beyond the given shell (index) with a given amplitude and a randomization spectrum with the largest value normalized to 1.
+void randomizePhasesBeyondOutMask(MultidimArray<RFLOAT> &v, MultidimArray<RFLOAT> &m, int index, int index_upper, RFLOAT amplitude, RFLOAT scale)
+{
+    //Seperate into two parts, in the mask and outside the mask.
+    MultidimArray< RFLOAT > Masked(v, true);
+    MultidimArray< RFLOAT > Masked_out(v, true);
+    MultidimArray< Complex > FT_masked;
+    FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(v){
+        DIRECT_MULTIDIM_ELEM(Masked, n) = DIRECT_MULTIDIM_ELEM(v, n) * DIRECT_MULTIDIM_ELEM(m, n);
+        DIRECT_MULTIDIM_ELEM(Masked_out, n) = DIRECT_MULTIDIM_ELEM(v, n) - DIRECT_MULTIDIM_ELEM(Masked, n);
+    }
+
+    FourierTransformer transformer;
+    transformer.FourierTransform(Masked_out, FT_masked, false);
+
+    int index2 = index * index;
+    int index_upper2 = index_upper * index_upper;
+    FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(FT_masked)
+    {
+        RFLOAT p2 = kp * kp + ip * ip + jp * jp;
+    	if (p2 >= index2 && p2 <= index_upper2)
+    	{
+    		RFLOAT mag = abs(DIRECT_A3D_ELEM(FT_masked, k, i, j));
+    		RFLOAT ini_phas = (atan2((DIRECT_A3D_ELEM(FT_masked, k, i, j)).imag, (DIRECT_A3D_ELEM(FT_masked, k, i, j)).real));
+    		RFLOAT add_phas = amplitude * rnd_unif(-PI, PI);
+    		RFLOAT phas = ini_phas + add_phas;
+                if (phas < 0)
+		{
+		    phas += (2*PI);
+		}
+    		RFLOAT realval = mag * cos(phas) * scale;
+    		RFLOAT imagval = mag * sin(phas) * scale;
+    		DIRECT_A3D_ELEM(FT_masked, k, i, j) = Complex(realval, imagval);
+    	}
+    }
+
+    // Inverse transform
+    transformer.inverseFourierTransform();
+    FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(v){
+        DIRECT_MULTIDIM_ELEM(v, n) = DIRECT_MULTIDIM_ELEM(Masked, n) + DIRECT_MULTIDIM_ELEM(Masked_out, n);
+    }
+}
+// Modified by Gaoxing for Randomize phases beyond the given shell (index) with a given amplitude and a randomization spectrum with the largest value normalized to 1.
+void randomizePhasesBeyond_1DSpectrum(MultidimArray<RFLOAT> &I, int index, int index_upper, RFLOAT amplitude, MultidimArray<RFLOAT> &normalized_spectrum )
+{
+    MultidimArray< Complex > FT;
+    FourierTransformer transformer;
+    double max_spec = 0;
+    FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(normalized_spectrum){
+		if (DIRECT_MULTIDIM_ELEM(normalized_spectrum, n) > max_spec){
+			max_spec = DIRECT_MULTIDIM_ELEM(normalized_spectrum, n);
+		}
+	}
+
+
+    transformer.FourierTransform(I, FT, false);
+
+    int index2 = index * index;
+    int index_upper2 = index_upper * index_upper;
+    FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(FT)
+    {
+        RFLOAT p2 = kp * kp + ip * ip + jp * jp;
+    	if (p2 >= index2 && p2 <= index_upper2)
+    	{
+		int spec_ind = int(sqrt(p2)) > (MULTIDIM_SIZE(normalized_spectrum) - 1) ? (MULTIDIM_SIZE(normalized_spectrum) - 1) : int(sqrt(p2));
+    		RFLOAT mag = abs(DIRECT_A3D_ELEM(FT, k, i, j));
+    		RFLOAT ini_phas = (atan2((DIRECT_A3D_ELEM(FT, k, i, j)).imag, (DIRECT_A3D_ELEM(FT, k, i, j)).real));
+    		RFLOAT add_phas = DIRECT_MULTIDIM_ELEM(normalized_spectrum, spec_ind) * amplitude * rnd_unif(-PI, PI) / max_spec;
+    		RFLOAT phas = ini_phas + add_phas;
+                if (phas < 0)
+		{
+		    phas += (2*PI);
+		}
+    		RFLOAT realval = mag * cos(phas);
+    		RFLOAT imagval = mag * sin(phas);
+    		DIRECT_A3D_ELEM(FT, k, i, j) = Complex(realval, imagval);
+    	}
+    }
+
+    // Inverse transform
+    transformer.inverseFourierTransform();
+}
 // Fourier ring correlation -----------------------------------------------
 // from precalculated Fourier Transforms, and without sampling rate etc.
 void getFSC(MultidimArray< Complex > &FT1,

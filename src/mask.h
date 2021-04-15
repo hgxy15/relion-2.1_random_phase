@@ -55,6 +55,9 @@ void softMaskOutsideMap(MultidimArray<RFLOAT> &vol, MultidimArray<RFLOAT> &msk, 
 // If verb, then output description of steps and progress bars
 void autoMask(MultidimArray<RFLOAT> &img_in, MultidimArray<RFLOAT> &msk_out,
 		RFLOAT  ini_mask_density_threshold, RFLOAT extend_ini_mask, RFLOAT width_soft_mask_edge, bool verb = false);
+// Gaoxing
+void autoMask(MultidimArray<RFLOAT> &img_in, MultidimArray<RFLOAT> &msk_out,
+		RFLOAT  ini_mask_density_threshold, RFLOAT extend_ini_mask, RFLOAT width_soft_mask_edge, RFLOAT width_exponential_edge, bool verb = false);
 
 // Fills mask with a soft-edge circular mask (soft-edge in between radius and radius_p), centred at (x, y, z)
 void raisedCosineMask(MultidimArray<RFLOAT> &mask, RFLOAT radius, RFLOAT radius_p, int x, int y, int z = 0);

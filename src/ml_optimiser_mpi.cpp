@@ -52,27 +52,15 @@ void MlOptimiserMpi::read(int argc, char **argv)
 
     // First read in non-parallelisation-dependent variables
     MlOptimiser::read(argc, argv, node->rank);
-    if (random_phase_switch)
-    {
-	    myrandom.parse_initial(this);
-    }
-
+    //See if the random phase switch is turned on.
+    //Parse random phase related options after all others.
     int mpi_section = parser.addSection("MPI options");
     only_do_unfinished_movies = parser.checkOption("--only_do_unfinished_movies", "When processing movies on a per-micrograph basis, ignore those movies for which the output STAR file already exists.");
-    //See if the random phase switch is turned on.
-    //Enter development mode of random phase 3D classification when specified
-    if (random_phase_dev)
-    {
-	    myrandom.string_set_up_debug();
-	    myrandom.iterate_set_up_debug(this);
-	    exit(RANDOM_PHASE_DEV_EXIT_CODE);
-    }
 
     // Don't put any output to screen for mpi slaves
     ori_verb = verb;
     if (verb != 0)
     	verb = (node->isMaster()) ? ori_verb : 0;
-
 //#define DEBUG_BODIES
 #ifdef DEBUG_BODIES
     verb = (node->rank==1) ? ori_verb : 0;
@@ -470,6 +458,23 @@ will still yield good performance and possibly a more stable execution. \n" << s
 
 
     MlOptimiser::initialiseGeneral(node->rank);
+
+    //Only start to parse randomphase related after initialise general!
+    if (random_phase_switch)
+    {
+	    if (verb){
+		//std::cout << "Iref has size of "<< NZYXSIZE(this->mymodel.Iref[0]) << std::endl;
+	    }	
+	    myrandom.parse_initial(this);
+    }
+
+    //Enter development mode of random phase 3D classification when specified
+    if (random_phase_dev)
+    {
+	    myrandom.string_set_up_debug();
+	    myrandom.iterate_set_up_debug(this);
+	    exit(RANDOM_PHASE_DEV_EXIT_CODE);
+    }
 
     initialiseWorkLoad();
 
@@ -2553,6 +2558,14 @@ void MlOptimiserMpi::reconstructUnregularisedMapAndCalculateSolventCorrectedFSC(
 		Image<RFLOAT> Imask;
 		Imask.read(fn_mask);
 		Imask().setXmippOrigin();
+		//Gaoxing
+		if (do_post_mask)
+		{
+			//RFLOAT tmp_bpost_mask = -1.0 * bpost_mask;
+			std::cout << "Applying post mask for solvent correct fsc" << std::endl;
+			applyBFactorToMap(Iunreg1(), bpost_mask, mymodel.pixel_size);
+			applyBFactorToMap(Iunreg2(), bpost_mask, mymodel.pixel_size);
+		}
 		Iunreg1() *= Imask();
 		Iunreg2() *= Imask();
 		getFSC(Iunreg1(), Iunreg2(), fsc_masked);
@@ -2872,6 +2885,38 @@ void MlOptimiserMpi::iterate()
 	{
 		exit (RANDOM_PHASE_DEV_EXIT_CODE);
 	}
+	Image<RFLOAT> mixed_map;
+	Image<RFLOAT> mix_temp_map;
+	Image<RFLOAT> rms_map;
+
+	//std::cout << "\033[0;31mmix_map created " << iter << "\033[0m\n";
+	MultidimArray<Complex> mixed_map_fft;
+	//std::cout << "\033[0;31mmix_map_fft created " << iter << "\033[0m\n";
+	FourierTransformer mix_transformer, rms_transformer;
+	if (do_mix_map)
+	{
+		mixed_map.read(mix_map);
+		mix_temp_map.read(mix_map);
+		//std::cout << "\033[0;31mmix_map read: " << mix_map << "\033[0m\n";
+		mix_transformer.FourierTransform(mixed_map.data, mixed_map_fft, false);
+		rms_transformer.FourierTransform(mixed_map.data, refzero_grad_rms, false);
+		rms_map().resize(refzero_grad_rms);
+		//std::cout << "\033[0;31mmix_map transformed " << iter << "\033[0m\n";
+	}
+	Image<RFLOAT> ftmask_map;
+	Image<RFLOAT> ftmask_temp_map;
+
+	//std::cout << "\033[0;31mmix_map created " << iter << "\033[0m\n";
+	MultidimArray<Complex> ftmask_map_fft;
+	//std::cout << "\033[0;31mmix_map_fft created " << iter << "\033[0m\n";
+	FourierTransformer mask_map_transformer;
+	if (do_ftmask_map)
+	{
+		ftmask_map.read(fnftmask_map);
+		ftmask_temp_map.read(fnftmask_map);
+		mask_map_transformer.FourierTransform(ftmask_map.data, ftmask_map_fft, false);
+	}
+	MPI_Barrier(MPI_COMM_WORLD);
         //Set up the iteration for mpi version of randomphase.
 
 #ifdef TIMING
@@ -2900,6 +2945,45 @@ void MlOptimiserMpi::iterate()
 #ifdef TIMING
 		timer.tic(TIMING_EXP);
 #endif
+		// Modified by ZhouQ
+		// Reread original refs and replace current ref 
+		if (do_invariantref)
+		{
+			std::cout << "Now reading invariant reference for iteration:" << iter << std::endl;
+			Image<double> invref;	
+			if (fn_ref.isStarFile())
+			{
+				MetaDataTable MDref;
+				MDref.read(fn_ref);
+				mymodel.Iref.clear();
+				FileName fn_tmp;
+				FOR_ALL_OBJECTS_IN_METADATA_TABLE(MDref)
+				{
+					MDref.getValue(EMDL_MLMODEL_REF_IMAGE, fn_tmp);
+					invref.read(fn_tmp);
+					invref().setXmippOrigin();
+					mymodel.Iref.push_back(invref());
+				}
+			}
+			else
+			{
+				invref.read(fn_ref);
+				invref().setXmippOrigin();
+				mymodel.Iref[0] = invref();
+			}
+			// lowpass filter again
+			initialLowPassFilterReferences();
+			// re-read tau2 spectrum of references.
+			// The tau2_class is updated during expectationSetup if not fix_tau:
+			// mymodel.setFourierTransformMaps(!fix_tau, nr_threads);
+			if (fix_tau)
+			{
+				if (fn_tau != "None")
+				{
+					mymodel.readTauSpectrum(fn_tau,verb);
+				}
+			}
+		}
 		//Modified by Gaoxing for randomphase.
 		if (random_phase_switch)
 		{
@@ -2918,6 +3002,392 @@ void MlOptimiserMpi::iterate()
 			{
 				std::cout << "\033[0;33mThe iterate_initialize has no problem......."  << "\033[0m\n";
 			}
+		}
+		MPI_Barrier(MPI_COMM_WORLD);
+		if (do_mix_map)
+		{
+
+			std::cout << " mixing up for iteration "  << iter << std::endl;
+			MPI_Barrier(MPI_COMM_WORLD);
+			if (node->isMaster()){
+				mix_temp_map.data = mymodel.Iref[0];
+				mix_temp_map.write(fn_out + "_iter" + integerToString(iter) + "beformix_class001.mrc");
+				mixed_map.write(fn_out + "_iter" + integerToString(iter) + "beformixref_class001.mrc");
+				std::cout << " class001 before mixing has been stored in: " <<  fn_out << "_iter" << iter << "beforemix_class001.mrc" << std::endl;
+			}
+			MPI_Barrier(MPI_COMM_WORLD);
+			MultidimArray<Complex> refzero_fft;
+			MultidimArray<RFLOAT> mix_fsc;
+			getFSC(mixed_map.data, mymodel.Iref[0], mix_fsc);
+			FOR_ALL_DIRECT_ELEMENTS_IN_ARRAY1D(mix_fsc)
+			{
+				if (i > 0 && DIRECT_A1D_ELEM(mix_fsc, i) < 0.143)
+				{
+					std::cout << "iteration " << iter << " has ref fsc at 0.143 at resolution index of " << i  << std::endl;
+					break;
+				}
+			}
+			FourierTransformer transformer;
+			transformer.FourierTransform(mymodel.Iref[0], refzero_fft, false);
+			RFLOAT p2, mag, ref_mag, ini_phas, ref_phas, phas, realval, imagval, temp_realval, temp_imagval, diff_phas, ini_diff_phas, rms, mixing_weight;
+			int p;
+			//First pass only calculates the std on each fourier shell.
+			MultidimArray<RFLOAT> phase_diff_std;
+			MultidimArray<int> pix_count;
+			phase_diff_std.resize(1,1,1,XSIZE(refzero_fft));
+			pix_count.resize(1,1,1,XSIZE(refzero_fft));
+			phase_diff_std.initZeros();
+			pix_count.initZeros();
+			FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(refzero_fft)
+			{
+				p2 = kp * kp + jp * jp + ip * ip;
+				p = (int)sqrt(p2);
+				if (p >= NZYXSIZE(phase_diff_std))
+					continue;
+				//std::cout << p << std::endl;
+				ini_phas = (atan2((DIRECT_A3D_ELEM(refzero_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(refzero_fft, k, i, j)).real));
+				ref_phas = (atan2((DIRECT_A3D_ELEM(ftmask_map_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(ftmask_map_fft, k, i, j)).real));
+				DIRECT_A1D_ELEM(phase_diff_std, p) += ((ini_phas - ref_phas) * (ini_phas - ref_phas)); 
+				DIRECT_A1D_ELEM(pix_count, p) += 1; 
+			}
+			FOR_ALL_DIRECT_ELEMENTS_IN_ARRAY1D(phase_diff_std)
+			{
+				DIRECT_A1D_ELEM(phase_diff_std, i) /= (DIRECT_A1D_ELEM(pix_count, i) - 1);
+				DIRECT_A1D_ELEM(phase_diff_std, i) = sqrt(DIRECT_A1D_ELEM(phase_diff_std, i));
+			}
+			FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(refzero_fft)
+			{
+				p2 = kp * kp + ip * ip + jp * jp;
+				p = (int) sqrt(p2);
+				//std::cout <<  mix_res_high_vec[iter] << std::endl;	
+				if ((p > ROUND(mymodel.ori_size * mymodel.pixel_size / mix_res_high_vec[iter])) || (p < ROUND(mymodel.pixel_size *  mymodel.ori_size / mix_res_low_vec[iter])))
+					break;
+				else
+				//	std::cout << "start calculate mag"  << std::endl;	
+				mag = abs(DIRECT_A3D_ELEM(refzero_fft, k, i, j));
+				ref_mag = abs(DIRECT_A3D_ELEM(mixed_map_fft, k, i, j));
+				ini_phas = (atan2((DIRECT_A3D_ELEM(refzero_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(refzero_fft, k, i, j)).real));
+				ref_phas = (atan2((DIRECT_A3D_ELEM(mixed_map_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(mixed_map_fft, k, i, j)).real));
+				if (k==1&&i==1&&j<10&&node->isMaster())
+				{
+					std::cout << "iniphase:" << ini_phas << std::endl;
+					std::cout << "refphase:" << ref_phas << std::endl;
+				}
+				ini_diff_phas = (ini_phas - ref_phas);
+				if (ini_diff_phas > pi)
+				{
+					ini_diff_phas = 2 * pi - ini_diff_phas;
+				}
+				else if (ini_diff_phas < -pi)
+				{
+					ini_diff_phas = ini_diff_phas + 2 * pi;
+				}
+				diff_phas = ini_diff_phas * mix_rate * ((1.0 - mix_ratio_vec[iter]) * (1.0 - (DIRECT_A1D_ELEM(mix_fsc, p)>-0.1?DIRECT_A1D_ELEM(mix_fsc, p):1.0)));
+				if (k==1&&i==1&&j<10&&node->isMaster())
+				{
+					std::cout << "diffphase:" << diff_phas << std::endl;
+				}
+				ini_diff_phas /= DIRECT_A1D_ELEM(phase_diff_std, p);
+				if (use_cosine_mixing)
+					mixing_weight = 0.5 * (cos(ini_diff_phas * DIRECT_A1D_ELEM(phase_diff_std, p)) + 1);
+				else if (use_normal_mixing)
+					mixing_weight = exp(-0.5 * ini_diff_phas * ini_diff_phas * mixing_normal_factor);
+				if ((iter != 0) && (iter != 1))
+				{
+					rms = DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j).real;
+					DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j) = Complex((rms_beta * rms + (1 - rms_beta) * (diff_phas * diff_phas)), 0);
+					rms = DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j).real;
+					phas = ref_phas + diff_phas ;/// sqrt(rms);
+					realval = mag * ((mixing_weight) * cos(ref_phas) + (1 - mixing_weight) * cos(ini_phas));
+					imagval = mag * ((mixing_weight) * sin(ref_phas) + (1 - mixing_weight) * sin(ini_phas));
+					DIRECT_A3D_ELEM(refzero_fft, k, i, j) = Complex(realval, imagval);
+					if (k==1&&i==1&&j<10&&node->isMaster())
+					{
+						std::cout << "after mixing iniphase:" << phas << std::endl;
+					}
+					phas = ref_phas + (1.0 - mix_ratio_vec[iter]) * (1.0 - mix_ratio_vec[iter]) * diff_phas; // sqrt(rms) + ref_phas;
+					realval = ref_mag * cos(phas);
+					imagval = ref_mag * sin(phas);
+					DIRECT_A3D_ELEM(mixed_map_fft, k, i, j) = Complex(realval, imagval);
+					MPI_Barrier(MPI_COMM_WORLD);
+					if (k==1&&i==1&&j<10&&node->isMaster())
+					{
+						std::cout << "after mixing refphase:" << phas << std::endl;
+					}
+				}
+				else  
+				{
+					if (iter == 1)
+					{
+						DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j) = Complex(0,0);
+						MPI_Barrier(MPI_COMM_WORLD);
+					}
+					phas = diff_phas + ref_phas;
+					//realval = mag * cos(phas);
+					//imagval = mag * sin(phas);
+					realval = mag * ((mixing_weight) * cos(ref_phas) + (1 - mixing_weight) * cos(ini_phas));
+					imagval = mag * ((mixing_weight) * sin(ref_phas) + (1 - mixing_weight) * sin(ini_phas));
+					DIRECT_A3D_ELEM(refzero_fft, k, i, j) = Complex(realval, imagval);
+					if (k==1&&i==1&&j<10&&node->isMaster())
+					{
+						std::cout << "after initialization iniphase:" << phas << std::endl;
+					}
+					phas = (1.0 - mix_ratio_vec[iter]) * diff_phas + ref_phas;
+					realval = ref_mag * cos(phas);
+					imagval = ref_mag * sin(phas);
+					DIRECT_A3D_ELEM(mixed_map_fft, k, i, j) = Complex(realval, imagval);
+					MPI_Barrier(MPI_COMM_WORLD);
+					if (k==1&&i==1&&j<10&&node->isMaster())
+					{
+						std::cout << "after mixing refphase:" << phas << std::endl;
+					}
+				}
+			}
+			if (node->isMaster())
+			{
+				FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(rms_map())
+				{
+					DIRECT_MULTIDIM_ELEM(rms_map(), n) = (DIRECT_MULTIDIM_ELEM(refzero_grad_rms, n)).real;
+				}
+				rms_map.write(fn_out + "_iter" + integerToString(iter) + "rms_class001.mrc");
+			}
+			MPI_Barrier(MPI_COMM_WORLD);
+			if (iter == 1)
+			{
+				node->relion_MPI_Bcast(MULTIDIM_ARRAY(refzero_grad_rms), MULTIDIM_SIZE(refzero_grad_rms), MY_MPI_COMPLEX, 0, MPI_COMM_WORLD);
+			}
+			transformer.inverseFourierTransform();
+			MPI_Barrier(MPI_COMM_WORLD);
+			std::cout << "\033[0;33m mixing complete......."  << "\033[0m\n";
+			std::cout << "\033[0;33m broadcasting mixed map complete......."  << "\033[0m\n";
+			if (node->isMaster())
+			{
+				std::string out_mix = fn_out + "_iter"+ integerToString(iter) + "aftermix_class001.mrc";
+				mix_temp_map.data = mymodel.Iref[0];
+				mix_temp_map.write(out_mix);
+				mixed_map.write(fn_out + "_iter" + integerToString(iter) + "aftermixref_class001.mrc");
+			}
+			MPI_Barrier(MPI_COMM_WORLD);
+			/*
+			if (do_auto_refine)
+			{
+				MPI_Barrier(MPI_COMM_WORLD);
+				if (node->isMaster()){
+					mix_temp_map.data = mymodel.Iref[1];
+					mix_temp_map.write(fn_out + "_iter" + integerToString(iter) + "beformix_class002.mrc");
+					mixed_map.write(fn_out + "_iter" + integerToString(iter) + "beformixref_class002.mrc");
+					std::cout << " class002 before mixing has been stored in: " <<  fn_out << "_iter" << iter << "beforemix_class002.mrc" << std::endl;
+				}
+				MPI_Barrier(MPI_COMM_WORLD);
+				MultidimArray<Complex> refzero_fft;
+				MultidimArray<RFLOAT> mix_fsc;
+				getFSC(mixed_map.data, mymodel.Iref[0], mix_fsc);
+				FOR_ALL_DIRECT_ELEMENTS_IN_ARRAY1D(mix_fsc)
+				{
+					if (i > 0 && DIRECT_A1D_ELEM(mix_fsc, i) < 0.143)
+					{
+						std::cout << "iteration " << iter << " has ref fsc at 0.143 at resolution index of " << i  << std::endl;
+						break;
+					}
+				}
+				FourierTransformer transformer;
+				transformer.FourierTransform(mymodel.Iref[0], refzero_fft, false);
+				RFLOAT p2, mag, ref_mag, ini_phas, ref_phas, phas, realval, imagval, diff_phas, ini_diff_phas, rms;
+				int p;
+				FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(refzero_fft)
+				{
+					p2 = kp * kp + ip * ip + jp * jp;
+					p = (int) sqrt(p2);
+					//std::cout <<  mix_res_high_vec[iter] << std::endl;	
+					if ((p > ROUND(mymodel.ori_size * mymodel.pixel_size / mix_res_high_vec[iter])) || (p < ROUND(mymodel.pixel_size *  mymodel.ori_size / mix_res_low_vec[iter])))
+						break;
+					else
+						//	std::cout << "start calculate mag"  << std::endl;	
+						mag = abs(DIRECT_A3D_ELEM(refzero_fft, k, i, j));
+					ref_mag = abs(DIRECT_A3D_ELEM(mixed_map_fft, k, i, j));
+					ini_phas = (atan2((DIRECT_A3D_ELEM(refzero_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(refzero_fft, k, i, j)).real));
+					ref_phas = (atan2((DIRECT_A3D_ELEM(mixed_map_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(mixed_map_fft, k, i, j)).real));
+					if (k==1&&i==1&&j<10&&node->isMaster())
+					{
+						std::cout << "iniphase:" << ini_phas << std::endl;
+						std::cout << "refphase:" << ref_phas << std::endl;
+					}
+					ini_diff_phas = ini_phas - ref_phas;
+					if (ini_diff_phas > pi)
+					{
+						ini_diff_phas = 2 * pi - ini_diff_phas;
+					}
+					else if (ini_diff_phas < -pi)
+					{
+						ini_diff_phas = ini_diff_phas + 2 * pi;
+					}
+					diff_phas = ini_diff_phas * mix_rate * ((1.0 - mix_ratio_vec[iter]) * (1.0 - (DIRECT_A1D_ELEM(mix_fsc, p)>-0.1?DIRECT_A1D_ELEM(mix_fsc, p):1.0)));
+					if (k==1&&i==1&&j<10&&node->isMaster())
+					{
+						std::cout << "diffphase:" << diff_phas << std::endl;
+					}
+					if ((iter != 0) && (iter != 1))
+					{
+						rms = DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j).real;
+						DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j) = Complex((rms_beta * rms + (1 - rms_beta) * (diff_phas * diff_phas)), 0);
+						rms = DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j).real;
+						phas = ref_phas + diff_phas ;/// sqrt(rms);
+						realval = mag * cos(phas);
+						imagval = mag * sin(phas);
+						DIRECT_A3D_ELEM(refzero_fft, k, i, j) = Complex(realval, imagval);
+						if (k==1&&i==1&&j<10&&node->isMaster())
+						{
+							std::cout << "after mixing iniphase:" << phas << std::endl;
+						}
+						phas = ref_phas + (1.0 - mix_ratio_vec[iter]) * (1.0 - mix_ratio_vec[iter]) * diff_phas; // sqrt(rms) + ref_phas;
+						realval = ref_mag * cos(phas);
+						imagval = ref_mag * sin(phas);
+						DIRECT_A3D_ELEM(mixed_map_fft, k, i, j) = Complex(realval, imagval);
+						MPI_Barrier(MPI_COMM_WORLD);
+						if (k==1&&i==1&&j<10&&node->isMaster())
+						{
+							std::cout << "after mixing refphase:" << phas << std::endl;
+						}
+					}
+					else  
+					{
+						if (iter == 1)
+						{
+							DIRECT_A3D_ELEM(refzero_grad_rms, k, i, j) = Complex(0,0);
+							MPI_Barrier(MPI_COMM_WORLD);
+						}
+						phas = diff_phas + ref_phas;
+						realval = mag * cos(phas);
+						imagval = mag * sin(phas);
+						DIRECT_A3D_ELEM(refzero_fft, k, i, j) = Complex(realval, imagval);
+						if (k==1&&i==1&&j<10&&node->isMaster())
+						{
+							std::cout << "after initialization iniphase:" << phas << std::endl;
+						}
+						phas = (1.0 - mix_ratio_vec[iter]) * diff_phas + ref_phas;
+						realval = ref_mag * cos(phas);
+						imagval = ref_mag * sin(phas);
+						DIRECT_A3D_ELEM(mixed_map_fft, k, i, j) = Complex(realval, imagval);
+						MPI_Barrier(MPI_COMM_WORLD);
+						if (k==1&&i==1&&j<10&&node->isMaster())
+						{
+							std::cout << "after mixing refphase:" << phas << std::endl;
+						}
+					}
+				}
+				if (node->isMaster())
+				{
+					FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(rms_map())
+					{
+						DIRECT_MULTIDIM_ELEM(rms_map(), n) = (DIRECT_MULTIDIM_ELEM(refzero_grad_rms, n)).real;
+					}
+					rms_map.write(fn_out + "_iter" + integerToString(iter) + "rms_class002.mrc");
+				}
+				MPI_Barrier(MPI_COMM_WORLD);
+				if (iter == 1)
+				{
+					node->relion_MPI_Bcast(MULTIDIM_ARRAY(refzero_grad_rms), MULTIDIM_SIZE(refzero_grad_rms), MY_MPI_COMPLEX, 0, MPI_COMM_WORLD);
+				}
+				transformer.inverseFourierTransform();
+				MPI_Barrier(MPI_COMM_WORLD);
+				std::cout << "\033[0;33m mixing complete......."  << "\033[0m\n";
+				std::cout << "\033[0;33m broadcasting mixed map complete......."  << "\033[0m\n";
+				if (node->isMaster())
+				{
+					std::string out_mix = fn_out + "_iter"+ integerToString(iter) + "aftermix_class002.mrc";
+					mix_temp_map.data = mymodel.Iref[0];
+					mix_temp_map.write(out_mix);
+					mixed_map.write(fn_out + "_iter" + integerToString(iter) + "aftermixref_class002.mrc");
+				}
+			}
+			*/
+		}
+		MPI_Barrier(MPI_COMM_WORLD);
+        
+		if (do_ftmask_map)
+		{
+
+			std::cout << " masking in fourier space for iteration "  << iter << std::endl;
+			MPI_Barrier(MPI_COMM_WORLD);
+			if (node->isMaster()){
+				ftmask_temp_map.data = mymodel.Iref[0];
+				ftmask_temp_map.write(fn_out + "_iter" + integerToString(iter) + "beforftmask_class001.mrc");
+				ftmask_map.write(fn_out + "_iter" + integerToString(iter) + "beforftmaskref_class001.mrc");
+				std::cout << " class001 before ft masking has been stored in: " <<  fn_out << "_iter" << iter << "beforeftmask_class001.mrc" << std::endl;
+			}
+			MPI_Barrier(MPI_COMM_WORLD);
+			MultidimArray<Complex> refzero_fft;
+			FourierTransformer transformer;
+			transformer.FourierTransform(mymodel.Iref[0], refzero_fft, false);
+			RFLOAT p2, mag, ftmask_mag, ini_phas, ftmask_phas, realval, imagval, ini_diff_phas, phas;
+			int p;
+			//First pass only calculates the std on each fourier shell.
+			MultidimArray<RFLOAT> phase_diff_std;
+			MultidimArray<int> pix_count;
+			phase_diff_std.resize(1,1,1,XSIZE(refzero_fft));
+			pix_count.resize(1,1,1,XSIZE(refzero_fft));
+			phase_diff_std.initZeros();
+			pix_count.initZeros();
+			FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(refzero_fft)
+			{
+				p2 = kp * kp + jp * jp + ip * ip;
+				p = (int)sqrt(p2);
+				if (p >= NZYXSIZE(phase_diff_std))
+					continue;
+				//std::cout << p << std::endl;
+				ini_phas = (atan2((DIRECT_A3D_ELEM(refzero_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(refzero_fft, k, i, j)).real));
+				ftmask_phas = (atan2((DIRECT_A3D_ELEM(ftmask_map_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(ftmask_map_fft, k, i, j)).real));
+				DIRECT_A1D_ELEM(phase_diff_std, p) += ((ini_phas - ftmask_phas) * (ini_phas - ftmask_phas)); 
+				DIRECT_A1D_ELEM(pix_count, p) += 1; 
+			}
+			FOR_ALL_DIRECT_ELEMENTS_IN_ARRAY1D(phase_diff_std)
+			{
+				DIRECT_A1D_ELEM(phase_diff_std, i) /= (DIRECT_A1D_ELEM(pix_count, i) - 1);
+				DIRECT_A1D_ELEM(phase_diff_std, i) = sqrt(DIRECT_A1D_ELEM(phase_diff_std, i));
+			}
+			FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(refzero_fft)
+			{
+				p2 = kp * kp + ip * ip + jp * jp;
+				p = (int) sqrt(p2);
+				//std::cout <<  mix_res_high_vec[iter] << std::endl;	
+				if ((p > ROUND(mymodel.ori_size * mymodel.pixel_size / ftmask_res_high_vec[iter])) || (p < ROUND(mymodel.pixel_size *  mymodel.ori_size / ftmask_res_low_vec[iter])))
+					break;
+				else
+				//	std::cout << "start calculate mag"  << std::endl;	
+				mag = abs(DIRECT_A3D_ELEM(refzero_fft, k, i, j));
+				ftmask_mag = abs(DIRECT_A3D_ELEM(ftmask_map_fft, k, i, j));
+				ini_phas = (atan2((DIRECT_A3D_ELEM(refzero_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(refzero_fft, k, i, j)).real));
+				ftmask_phas = (atan2((DIRECT_A3D_ELEM(ftmask_map_fft, k, i, j)).imag, (DIRECT_A3D_ELEM(ftmask_map_fft, k, i, j)).real));
+				ini_diff_phas = abs(ini_phas - ftmask_phas) / DIRECT_A1D_ELEM(phase_diff_std, p);
+				if (ini_diff_phas < ftmask_phase_th)
+				{
+					phas = ftmask_phas;
+				}
+				else
+				{
+					phas = ini_phas;
+				}
+				realval = exp(-0.5 * ini_diff_phas * ini_diff_phas * ftmasking_normal_factor) * mag * cos(phas);
+				imagval = exp(-0.5 * ini_diff_phas * ini_diff_phas * ftmasking_normal_factor) * mag * sin(phas);
+				realval = mag * cos(phas);
+				imagval = mag * sin(phas);
+				//std::cout << realval << std::endl;
+				DIRECT_A3D_ELEM(refzero_fft, k, i, j) = Complex(realval, imagval);
+				MPI_Barrier(MPI_COMM_WORLD);
+			}
+			//MPI_Barrier(MPI_COMM_WORLD);
+			transformer.inverseFourierTransform();
+			MPI_Barrier(MPI_COMM_WORLD);
+			std::cout << "\033[0;33m ft masking complete......."  << "\033[0m\n";
+			std::cout << "\033[0;33m broadcasting ft masked map complete......."  << "\033[0m\n";
+			if (node->isMaster())
+			{
+				std::string out_mix = fn_out + "_iter"+ integerToString(iter) + "afterftmask_class001.mrc";
+				ftmask_temp_map.data = mymodel.Iref[0];
+				ftmask_temp_map.write(out_mix);
+				ftmask_map.write(fn_out + "_iter" + integerToString(iter) + "afterftmaskref_class001.mrc");
+			}
+			MPI_Barrier(MPI_COMM_WORLD);
 		}
 
 		for (subset = subset_start; subset <= nr_subsets; subset++)
@@ -2984,6 +3454,14 @@ void MlOptimiserMpi::iterate()
 					else
 						std::cout << " Applying helical symmetry from the last iteration in real space..." << std::endl;
 				}
+			}
+			if (node->isMaster())
+			{
+				std::cout << "Master sampling fn_sym: " << sampling.fn_sym << std::endl;
+				std::cout << "Master wsum model BPref total symNo: " << wsum_model.BPref[0].SL.SymsNo() << std::endl;
+				std::cout << "Master wsum model BPref has size" << XSIZE(wsum_model.BPref[0].data) << std::endl;
+				std::cout << "Master wsum model BPref has size" << YSIZE(wsum_model.BPref[0].data) << std::endl;
+				std::cout << "Master wsum model BPref has size" << ZSIZE(wsum_model.BPref[0].data) << std::endl;
 			}
 			symmetriseReconstructions();
 

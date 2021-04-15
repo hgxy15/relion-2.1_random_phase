@@ -844,7 +844,6 @@ public:
 			std::vector<MultidimArray<RFLOAT> > &exp_local_Fctfs,
 			std::vector<RFLOAT> &exp_local_sqrtXi2,
 			std::vector<MultidimArray<RFLOAT> > &exp_local_Minvsigma2s);
-
 	// Given exp_Mcoarse_significant, check for iorient whether any of the particles has any significant (coarsely sampled) translation
 	bool isSignificantAnyParticleAnyTranslation(long int iorient,
 			int exp_itrans_min, int exp_itrans_max, MultidimArray<bool> &exp_Mcoarse_significant);
@@ -933,6 +932,38 @@ public:
 	RandomPhase myrandom;
 	bool random_phase_switch;
 	bool random_phase_dev;
+	// Modified by ZhouQ, for invariant ref
+	bool do_invariantref ;
+	// Modified by Gaoxing, for mask_classes
+	std::string mask_class ;
+	std::vector<std::string> mask_class_split;
+	// Modified by Gaoxing, for mixing maps.
+	bool do_ftmask_map;
+	std::string fnftmask_map;
+	std::string ftmask_res;
+	RFLOAT ftmask_phase_th;
+	bool do_mix_map;
+	bool use_normal_mixing;
+	RFLOAT mixing_normal_factor;
+	RFLOAT ftmasking_normal_factor;
+	bool use_cosine_mixing;
+	std::string mix_map;
+	std::string mix_res;
+	std::string mix_ratio;
+	std::vector<RFLOAT> mix_ratio_vec;
+	std::vector<RFLOAT> mix_res_low_vec;
+	std::vector<RFLOAT> mix_res_high_vec;
+	std::vector<RFLOAT> ftmask_res_low_vec;
+	std::vector<RFLOAT> ftmask_res_high_vec;
+	RFLOAT rms_beta;
+	RFLOAT mix_rate;
+	MultidimArray<Complex> refzero_grad_rms;
+	bool do_fourier_weighting;
+	std::string fourier_mask_real;
+	MultidimArray<Complex> fourier_mask;
+	bool do_post_mask;
+	RFLOAT bpost_mask;
+	bool do_always_refine;
 };
 
 // Global call to threaded core of doThreadExpectationSomeParticles

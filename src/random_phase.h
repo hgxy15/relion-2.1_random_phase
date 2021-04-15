@@ -38,6 +38,7 @@ Author: "Qiang Zhou"
 #include "src/strings.h"
 #include "src/macros.h"
 #include "src/mpi.h"
+#include "src/error.h"
 #define RANDOM_PHASE_DEV_EXIT_CODE -1
 #define RANDOM_PHASE_RES 40
 #define GOOD_RANDOM_PHASE_RES 10
@@ -480,14 +481,27 @@ class RandomPhase
 
 			if (random_phase_good_string != "")
 			{
-				splitString(random_phase_good_string, ":", colon_split, true);
 				lower_string = "";
 				upper_string = "";
 				bool_string = "";
+				splitString(random_phase_good_string, ":", colon_split, true);
+				if (colon_split.empty())
+				{
+					colon_split.push_back(random_phase_good_string);
+				}
 				for (int i = 1; i <= colon_split.size(); i++)
 				{
-					iteration = textToInteger(comma_split[2]);
-					cycle = textToInteger(comma_split[3]);
+					//std::cout << "\033[0;31m This is the debug line, the colon split element is now " << colon_split[i - 1] << "\033[0m\n";
+					splitString(colon_split[i -1], ",", comma_split, true);
+					if (comma_split.empty())
+					{
+						if (optimiser->verb > 0 && optimiser->node->isMaster())
+						{
+							std::cout <<"\033[0;31mThe check_nr_iter function should be called to complete the given parameter to the default form, please check your code!\033[0m\n";
+						}
+					}
+					iteration = textToInteger(*(comma_split.end() - 2));
+					cycle = textToInteger(*(comma_split.end() - 1));
 					for (int mycycle = 1; mycycle <= cycle; mycycle ++) 
 					{
 						bool_string += "true,1,1:";
@@ -498,7 +512,6 @@ class RandomPhase
 							bool_string += ":";
 						}
 					}
-					splitString(colon_split[i - 1], ",", comma_split, true);
 					lower_string += comma_split[0];
 					lower_string += ",";
 					lower_string += comma_split[2];
@@ -515,32 +528,33 @@ class RandomPhase
 						upper_string += ":" ;
 					}
 				}
-				temp_rfloat = 0.1;
 				this->random_phase_good_res_iter.push_back(temp_int);
 				this->random_phase_good_res_upper_iter.push_back(temp_rfloat);
-				temp_rfloat = 1.0;
 				this->do_good_random_phase_iter.push_back(temp_bool);
+				temp_rfloat = 1.0;
 				this->random_phase_good_amplitude_iter.push_back(temp_rfloat);
+				//std::cout << "\033[0;31mCongratulations! You have reached line 444" << upper_string << lower_string << "The boolean string is: " << bool_string << "\033[0m\n";
 				this->set_parameter(optimiser, lower_string, this->random_phase_good_res_iter, "RFLOAT", lower_id_map_vector);
 				this->set_parameter(optimiser, upper_string, this->random_phase_good_res_upper_iter, "RFLOAT", lower_id_map_vector);
 				this->set_parameter(optimiser, bool_string, this->do_good_random_phase_iter, "bool", lower_id_map_vector);
+				//std::cout << "\033[0;31mCongratulations! You have solved the initialization problem!\033[0m\n"; 
 				if (random_phase_good_amplitude_string != "")
 				{
-					this->set_parameter(optimiser, random_phase_good_amplitude_string, this->random_phase_good_amplitude_iter, "RFLOAT", lower_id_map_vector);
+					set_parameter(optimiser, random_phase_good_amplitude_string, this->random_phase_good_amplitude_iter, "RFLOAT", lower_id_map_vector);
 				}
 				else
 				{
 					if (optimiser->verb > 0 && optimiser->node->isMaster())
 					{
-						std::cout << "The phase_amplitude is not provided, using the default amplitude for good random phase!" << std::endl;
+						std::cout << "The good phase_amplitude is not provided, using the default amplitude for random phase!" << std::endl;
 					}
 					//exit(EMPTY_ARG_ERROR);
 					std::string temp_string = "";
-					temp_string += floatToString(DEFAULT_GOOD_AMPLITUDE,GOOD_AMPLITUDE_FLOAT_WIDTH,GOOD_AMPLITUDE_FLOAT_PREC);
+					temp_string += floatToString(DEFAULT_AMPLITUDE,AMPLITUDE_FLOAT_WIDTH,AMPLITUDE_FLOAT_PREC);
 					temp_string += ",";
 					temp_string += "1,";
 					temp_string += integerToString(optimiser->nr_iter, (FLOOR(log10(ABS(optimiser->nr_iter))) + 1), 0);
-					this->set_parameter(optimiser, temp_string, this->random_phase_good_amplitude_iter, "RFLOAT", lower_id_map_vector);
+					set_parameter(optimiser, temp_string, this->random_phase_good_amplitude_iter, "RFLOAT", lower_id_map_vector);
 				}
 			}
                         MPI_Barrier(MPI_COMM_WORLD);
@@ -551,6 +565,8 @@ class RandomPhase
 			int random_phase_rank;
 			int random_phase_index;
 			int random_phase_upper_index;
+			int random_phase_good_index;
+			int random_phase_good_upper_index;
 			RFLOAT random_phase_amplitude;
                         MPI_Barrier(MPI_COMM_WORLD);
 			if (this->do_random_phase_iter[optimiser->iter])
@@ -558,6 +574,10 @@ class RandomPhase
 				//If the mpi is not invoked, then no need to broadcast.
 				random_phase_index = ROUND(optimiser->mymodel.ori_size * optimiser->mymodel.pixel_size / this->random_phase_res_iter[optimiser->iter]);     
 				random_phase_upper_index = ROUND(optimiser->mymodel.ori_size * optimiser->mymodel.pixel_size / this->random_phase_res_upper_iter[optimiser->iter]);     
+				if (random_other_outside_mask){
+					random_phase_good_index = ROUND(optimiser->mymodel.ori_size * optimiser->mymodel.pixel_size / this->random_phase_good_res_iter[optimiser->iter]);     
+					random_phase_good_upper_index = ROUND(optimiser->mymodel.ori_size * optimiser->mymodel.pixel_size / this->random_phase_good_res_upper_iter[optimiser->iter]);     
+				}
 				random_phase_amplitude = this->random_phase_amplitude_iter[optimiser->iter];
 				for (int i = 1; i < optimiser->mymodel.nr_classes; i ++)
 				{
@@ -567,7 +587,31 @@ class RandomPhase
 						optimiser->mymodel.data_vs_prior_class[i] = optimiser->mymodel.data_vs_prior_class[0];
 						//optimiser->mymodel.pdf_direction[i] = optimiser->mymodel.pdf_direction[0];
 						optimiser->mymodel.Iref[i] = optimiser->mymodel.Iref[0];
-						randomizePhasesBeyond(optimiser->mymodel.Iref[i], random_phase_index, random_phase_upper_index, random_phase_amplitude); 
+						if (! random_spec){	
+							if(! random_inside_mask){
+								randomizePhasesBeyond(optimiser->mymodel.Iref[i], random_phase_index, random_phase_upper_index, random_phase_amplitude); 
+							}
+							else{
+								if(random_mask.sameShapeSimple(optimiser->mymodel.Iref[i])){
+									randomizePhasesBeyondInMask(optimiser->mymodel.Iref[i], random_mask, random_phase_index, random_phase_upper_index, random_phase_amplitude);
+									if (random_other_outside_mask)
+									{
+										randomizePhasesBeyondOutMask(optimiser->mymodel.Iref[i], random_mask, random_phase_good_index, random_phase_good_upper_index, random_phase_amplitude ,randomize_bad_out_scale);
+									}
+									
+								}
+								else{
+									std::cerr << "random phase mask must have same shape as the model, please check your input!" << std::endl;
+									std::cerr << "random phase mask shape is: " << XSIZE(random_mask) << "," << YSIZE(random_mask) << "," << ZSIZE(random_mask) << std::endl;
+									std::cerr << "model shape is: " << XSIZE(optimiser->mymodel.Iref[0]) << "," << YSIZE(optimiser->mymodel.Iref[0]) << "," << ZSIZE(optimiser->mymodel.Iref[0]) << std::endl;
+									exit(-1);
+								}
+							}
+						}
+						//data_vs_prior is ssnr map?
+						else{
+							randomizePhasesBeyond_1DSpectrum(optimiser->mymodel.Iref[i], random_phase_index, random_phase_upper_index, random_phase_amplitude, optimiser->mymodel.data_vs_prior_class[0]);
+						}
 					}
 					else
 					{
@@ -579,7 +623,29 @@ class RandomPhase
 							optimiser->mymodel.data_vs_prior_class[i] = optimiser->mymodel.data_vs_prior_class[0];
 							//optimiser->mymodel.pdf_direction[i] = optimiser->mymodel.pdf_direction[0];
 							optimiser->mymodel.Iref[i] = optimiser->mymodel.Iref[0];
-							randomizePhasesBeyond(optimiser->mymodel.Iref[i], random_phase_index, random_phase_upper_index, random_phase_amplitude);
+							if (! random_spec){ 
+								if (! random_inside_mask){
+									randomizePhasesBeyond(optimiser->mymodel.Iref[i], random_phase_index, random_phase_upper_index, random_phase_amplitude);
+								}
+								else{
+									if(random_mask.sameShapeSimple(optimiser->mymodel.Iref[i])){
+										randomizePhasesBeyondInMask(optimiser->mymodel.Iref[i], random_mask, random_phase_index, random_phase_upper_index, random_phase_amplitude);
+										if (random_other_outside_mask)
+										{
+											randomizePhasesBeyondOutMask(optimiser->mymodel.Iref[i], random_mask, random_phase_good_index, random_phase_good_upper_index, random_phase_amplitude ,randomize_bad_out_scale);
+										}
+									}
+									else{
+										std::cerr << "random phase mask must have same shape as the model, please check your input!" << std::endl;
+										std::cerr << "random phase mask shape is: " << XSIZE(random_mask) << "," << YSIZE(random_mask) << "," << ZSIZE(random_mask) << std::endl;
+										std::cerr << "model shape is: " << XSIZE(optimiser->mymodel.Iref[0]) << "," << YSIZE(optimiser->mymodel.Iref[0]) << "," << ZSIZE(optimiser->mymodel.Iref[0]) << std::endl;
+										exit(-1);
+									}
+								}
+							}
+							else{
+								randomizePhasesBeyond_1DSpectrum(optimiser->mymodel.Iref[i], random_phase_index, random_phase_upper_index, random_phase_amplitude, optimiser->mymodel.data_vs_prior_class[0]);
+							}
 						}
 					}
 				}
@@ -605,7 +671,21 @@ class RandomPhase
 					//optimiser->mymodel.data_vs_prior_class[i] = optimiser->mymodel.data_vs_prior_class[0];
 					//optimiser->mymodel.pdf_direction[i] = optimiser->mymodel.pdf_direction[0];
 					//optimiser->mymodel.Iref[i] = optimiser->mymodel.Iref[0];
-					randomizePhasesBeyond(optimiser->mymodel.Iref[0], random_phase_index, random_phase_upper_index, random_phase_amplitude); 
+					//randomizePhasesBeyond(optimiser->mymodel.Iref[0], random_phase_index, random_phase_upper_index, random_phase_amplitude); 
+					if(! random_inside_mask){
+						randomizePhasesBeyond(optimiser->mymodel.Iref[0], random_phase_index, random_phase_upper_index, random_phase_amplitude); 
+					}
+					else{
+						if(random_mask.sameShapeSimple(optimiser->mymodel.Iref[0])){
+							randomizePhasesBeyondOutMask(optimiser->mymodel.Iref[0], random_mask, random_phase_index, random_phase_upper_index, random_phase_amplitude, randomize_good_out_scale);
+						}
+						else{
+							std::cerr << "random phase mask must have same shape as the model, please check your input!" << std::endl;
+							std::cerr << "random phase mask shape is: " << XSIZE(random_mask) << "," << YSIZE(random_mask) << "," << ZSIZE(random_mask) << std::endl;
+							std::cerr << "model shape is: " << XSIZE(optimiser->mymodel.Iref[0]) << "," << YSIZE(optimiser->mymodel.Iref[0]) << "," << ZSIZE(optimiser->mymodel.Iref[0]) << std::endl;
+							exit(-1);
+						}
+					}
 				}
 				else
 				{
@@ -617,7 +697,21 @@ class RandomPhase
 						//optimiser->mymodel.data_vs_prior_class[i] = optimiser->mymodel.data_vs_prior_class[0];
 						//optimiser->mymodel.pdf_direction[i] = optimiser->mymodel.pdf_direction[0];
 						//optimiser->mymodel.Iref[i] = optimiser->mymodel.Iref[0];
-						randomizePhasesBeyond(optimiser->mymodel.Iref[0], random_phase_index, random_phase_upper_index, random_phase_amplitude);
+						//randomizePhasesBeyond(optimiser->mymodel.Iref[0], random_phase_index, random_phase_upper_index, random_phase_amplitude);
+						if(! random_inside_mask){
+							randomizePhasesBeyond(optimiser->mymodel.Iref[0], random_phase_index, random_phase_upper_index, random_phase_amplitude); 
+						}
+						else{
+							if(random_mask.sameShapeSimple(optimiser->mymodel.Iref[0])){
+								randomizePhasesBeyondOutMask(optimiser->mymodel.Iref[0], random_mask, random_phase_index, random_phase_upper_index, random_phase_amplitude, randomize_good_out_scale);
+							}
+							else{
+								std::cerr << "random phase mask must have same shape as the model, please check your input!" << std::endl;
+								std::cerr << "random phase mask shape is: " << XSIZE(random_mask) << "," << YSIZE(random_mask) << "," << ZSIZE(random_mask) << std::endl;
+								std::cerr << "model shape is: " << XSIZE(optimiser->mymodel.Iref[0]) << "," << YSIZE(optimiser->mymodel.Iref[0]) << "," << ZSIZE(optimiser->mymodel.Iref[0]) << std::endl;
+								exit(-1);
+							}
+						}
 					}
 				}
 				if (optimiser->verb > 0 && optimiser->node->isMaster())
@@ -707,6 +801,8 @@ class RandomPhase
 			{
 				this->randomize_phase_goodrefs(optimiser, mpi);
 			}
+
+			//Broadcast for mpi version.
 			if (mpi)
 			{
 				//std::cout << "\033[0;33mOop! Seems to be a problem in broadcasting.....\033[0m\n";
@@ -728,6 +824,10 @@ class RandomPhase
 			}
 			if (this->do_good_random_phase && this->do_good_random_phase_iter[optimiser->iter])
 			{
+				if (optimiser->verb > 0 && optimiser->node->isMaster())
+				{
+					std::cout << "\033[0;32m"<< this->do_good_random_phase_iter[optimiser->iter] << "\033[0m\n";
+				}
 				this->randomize_phase_goodrefs(optimiser, mpi);
 				if (optimiser->verb > 0 && optimiser->node->isMaster())
 				{
@@ -805,11 +905,35 @@ class RandomPhase
 				}
 				this->do_cycle_vector.push_back(do_cyclic_random_phase);
 				this->do_cycle_vector.push_back(do_cyclic_amplitude);
+				fn_mask = optimiser->parser.getOption("--random_mask", "The density inside the mask will be randomized and the density outside will be retained, Default:", "");
+				random_other_outside_mask = optimiser->parser.checkOption("--random_other_refs_outside_mask","This is for turning on the phase randomization of masked out region in other references.");
+				randomize_good_out_scale = textToFloat(optimiser->parser.getOption("--random_good_out_scale", "The density outside the mask will be multiplied by this factor after phase randomization for the good reference, Default:1", "1"));
+				randomize_bad_out_scale = textToFloat(optimiser->parser.getOption("--randomize_bad_out_scale", "The density outside the mask will be multiplied by this factor after phase randomization for the bad reference, Default:1", "1"));
+				if (fn_mask != ""){
+					std::cout << "random mask name is " << fn_mask << "...." << std::endl;
+					//for initializing the random mask relevant things.
+
+					//std::cout << "starting to allocate space for random mask...." << std::endl;
+					Isolvent().resize(optimiser->mymodel.Iref[0]);
+					//std::cout << "setting origin for random mask...." << std::endl;
+					Isolvent().setXmippOrigin();
+					//std::cout << "initializaing all values to zero for random mask...." << std::endl;
+					Isolvent().initZeros();
+					//std::cout << "starting to read random mask...." << std::endl;
+					Isolvent.read(fn_mask);
+					//std::cout << "Again setting origin for random mask...." << std::endl;
+					Isolvent().setXmippOrigin();
+					//expose the Multidimarray.
+					this->random_mask = Isolvent.data;
+					random_inside_mask = true;
+				}
 			}
-			this->do_good_random_phase = optimiser->parser.checkOption("--random_phase_good_refs","This is for turning on the phase randomization procedure of the good classes.");
+			this->do_good_random_phase = optimiser->parser.checkOption("--random_phase_goodrefs","This is for turning on the phase randomization procedure of the good classes.");
+			this->random_spec = optimiser->parser.checkOption("--random_specs","This is for turning on the phase randomization based on ssnr map.");
+			this->random_phase_good_string = optimiser->parser.getOption("--random_phase_good_res", "Similar to the --random_phase_res option, this sets the random phase resolution and random phase resolution upper limit for the good reference, if specified, the phase randomization of the good reference will be turned on and the 4 parameters to specify in a single cycle are the random phase resolution, the random phase upper limit , the cool down iteration number and the cool down cycle, these 4 parameters should be separated by ',', different cycles of random phase cool down should be separated by ':', for example 40,10,5,3:30,10,3,5  \nAlternatively, one single parameter is also supported, by providing only one parameter the random phase resolution is set, for example 40 means to perform randomize uppon 40 angstrom and the --iter specified iteration number is used, no cool down is performed. \nTo maintain a divergence between the good and bad reference default is set to 10", "10");
+			this->random_phase_good_amplitude_string = optimiser->parser.getOption("--random_amplitude_goodrefs", "This is for specifying the amplitude for phase randomization in units of 2pi for the good references, please refer to the documentation of the --random_amplitude_other_refs option. Default:1", "1");
 			if (this->do_good_random_phase)
 			{
-				this->random_phase_good_string = optimiser->parser.getOption("--random_phase_good_res", "Similar to the --random_phase_res option, this sets the random phase resolution and random phase resolution upper limit for the good reference, if specified, the phase randomization of the good reference will be turned on and the 4 parameters to specify in a single cycle are the random phase resolution, the random phase upper limit , the cool down iteration number and the cool down cycle, these 4 parameters should be separated by ',', different cycles of random phase cool down should be separated by ':', for example 40,10,5,3:30,10,3,5  \nAlternatively, one single parameter is also supported, by providing only one parameter the random phase resolution is set, for example 40 means to perform randomize uppon 40 angstrom and the --iter specified iteration number is used, no cool down is performed. \nTo maintain a divergence between the good and bad reference default is set to 10", "10");
 				if (this->random_phase_good_string.find(":") == std::string::npos && this->random_phase_good_string.find(",") == std::string::npos)
 				{
 					this->do_cyclic_good_random_phase = false;
@@ -821,7 +945,6 @@ class RandomPhase
 				}
 				this->parameter_string_vector.push_back(&this->random_phase_good_string);
 				this->default_parameter_number_vector.push_back(4);
-				this->random_phase_good_amplitude_string = optimiser->parser.getOption("--random_amplitude_goodrefs", "This is for specifying the amplitude for phase randomization in units of 2pi for the good references, please refer to the documentation of the --random_amplitude_other_refs option. Default:1", "1");
 				if (this->random_phase_good_amplitude_string.find(":") == std::string::npos && this->random_phase_good_amplitude_string.find(",") == std::string::npos)
 				{
 					this->do_cyclic_good_amplitude = false;
@@ -852,7 +975,12 @@ class RandomPhase
 		  using MlOptimiserMpi::iter; 
 		  using MlOptimiserMpi::node;*/
 		//self defined variables and functions.
+		std::string fn_mask;
+		Image<RFLOAT> Isolvent;
 		bool do_random_phase ;
+		bool random_spec ;
+		bool random_inside_mask = false ;
+		bool random_other_outside_mask = false ;
 		bool do_good_random_phase ;
 		bool random_phase_amplitude_switch ; 
 		bool random_phase_good_amplitude_switch ;
@@ -865,9 +993,11 @@ class RandomPhase
 		bool do_particle_score_random_phase ; 
 		bool do_bfactor_refinement_random_phase ;
 		bool do_particle_movie_refinement_random_phase ;
-		int random_phase_index ;
-		int random_phase_upper_index ;
+		//int random_phase_index ;
+		//int random_phase_upper_index ;
 		RFLOAT random_phase_amplitude ;
+		RFLOAT randomize_good_out_scale;
+		RFLOAT randomize_bad_out_scale;
 		std::vector<bool> do_random_phase_iter ;
 		std::vector<bool> do_good_random_phase_iter ;
 		std::vector<std::string*> parameter_string_vector;
@@ -884,6 +1014,7 @@ class RandomPhase
 		std::vector<RFLOAT> random_phase_amplitude_iter;
 		std::vector<RFLOAT> random_phase_good_amplitude_iter;
 
+        MultidimArray<RFLOAT> random_mask;
 
 };
 #endif

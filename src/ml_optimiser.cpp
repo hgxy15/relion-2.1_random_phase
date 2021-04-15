@@ -421,8 +421,86 @@ void MlOptimiser::parseInitial(int argc, char **argv)
     fn_data = parser.getOption("--i", "Input images (in a star-file or a stack)");
     fn_out = parser.getOption("--o", "Output rootname");
     nr_iter = textToInteger(parser.getOption("--iter", "Maximum number of iterations to perform", "50"));
+    //Gaoxing
+	do_force_converge =  parser.checkOption("--force_converge", "Force an auto-refinement run to converge immediately upon starting.");
+    do_always_refine = parser.checkOption("--always_refine", "Keep on refining");
     random_phase_switch = parser.checkOption("--random_phase_otherrefs", "Randomize other refs other then the first one");
     random_phase_dev = parser.checkOption("--random_phase_dev", "Enter random phase 3D classification development mode");
+    do_post_mask = parser.checkOption("--post_mask", "whether to perform post masking.");
+    bpost_mask = textToFloat(parser.getOption("--post_mask", "the bfactor used for post masking", "-500"));
+    do_mix_map = parser.checkOption("--mix_map", "the map to mix into the reconstruction at each iteration");
+    mix_map = parser.getOption("--mix_map", "the map to mix into the reconstruction at each iteration", "");
+    use_cosine_mixing = parser.checkOption("--cosine_mixing", "use the cosine scheme for mixing the map into the reconstruction at each iteration");
+    use_normal_mixing = parser.checkOption("--normal_mixing", "use the normal scheme for mixing the map into the reconstruction at each iteration");
+    mixing_normal_factor = textToFloat(parser.getOption("--mixing_normal_factor", "the factor applied in normal mixing", ""));
+    ftmasking_normal_factor = textToFloat(parser.getOption("--ftmask_normal_factor", "the factor applied in normal mixing", ""));
+	
+    do_ftmask_map = parser.checkOption("--ftmask_map", "the map to use as fmask");
+    fnftmask_map = parser.getOption("--ftmask_map", "the map to use as fmask", "");
+    ftmask_phase_th = textToFloat(parser.getOption("--ftmask_phase_th", "the map to use as fmask", ""));
+    ftmask_res = parser.getOption("--ftmask_res", "the res to use a fmask", "");
+    mix_ratio = parser.getOption("--mix_ratio", "the ratio of mixing. 0.4,10.3:10 meas that ten iterations of mixing using 0.4 and 0.3 as mix ratio are performed.", "");
+    mix_rate = textToFloat(parser.getOption("--mix_rate", "the learning rate of mixing scheme", ""));
+    mix_res = parser.getOption("--mix_res", "the resolution limit for mixing 20,10,10 means mixing 20 A to 10 A for 10 iterations", "");
+    do_fourier_weighting = parser.checkOption("--fourier_weighting", "whether to perform fourier masking");
+    fourier_mask_real = parser.getOption("--fourier_mask_real", "filename for fourier mask, if not provided, fourier intensity of mix_map will be used", "");
+    MultidimArray<int> pix_count;
+    MultidimArray<RFLOAT> total_intensity;
+    MultidimArray<RFLOAT> intensity_scale_factor;
+    if (do_fourier_weighting)
+    {
+	    Image<RFLOAT> fmask_real;
+	    MultidimArray<Complex> fourier_mask_tmp;
+	    RFLOAT p2;
+	    int p;
+	    if (fourier_mask_real != "")
+	    {
+		    fmask_real.read(fourier_mask_real);
+	    }
+	    else
+	    {
+		    fmask_real.read(mix_map);
+	    }
+	    FourierTransformer fmask_transformer;
+	    fmask_transformer.FourierTransform(fmask_real(), fourier_mask_tmp, false);
+	    fourier_mask.resize(fourier_mask_tmp);
+	    pix_count.resize(1,1,1,XSIZE(fourier_mask_tmp));
+	    total_intensity.resize(1,1,1,XSIZE(fourier_mask_tmp));
+	    intensity_scale_factor.resize(1,1,1,XSIZE(fourier_mask_tmp));
+	    pix_count.initZeros();
+	    total_intensity.initZeros();
+	    intensity_scale_factor.initZeros();
+	    FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(fourier_mask_tmp)
+	    {
+		    DIRECT_A3D_ELEM(fourier_mask, k, i, j).real = abs(DIRECT_A3D_ELEM(fourier_mask_tmp, k, i, j)); 
+		    DIRECT_A3D_ELEM(fourier_mask, k, i, j).imag = 0; 
+	    }
+	    FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(fourier_mask)
+	    {
+		    p2 = kp * kp + jp * jp + ip * ip;
+		    p = (int)sqrt(p2);
+		    if (p > (XSIZE(pix_count) - 1)){continue;}
+		    DIRECT_A1D_ELEM(total_intensity, p) += DIRECT_A3D_ELEM(fourier_mask, k, i, j).real;
+		    DIRECT_A1D_ELEM(pix_count, p) += 1;
+	    }
+	    FOR_ALL_DIRECT_ELEMENTS_IN_MULTIDIMARRAY(total_intensity)
+	    {
+		    DIRECT_A1D_ELEM(intensity_scale_factor, n) = (RFLOAT)DIRECT_A1D_ELEM(pix_count, n) / DIRECT_A1D_ELEM(total_intensity, n);
+		    //std::cout << "pix cound at shell " << n << " is "<< DIRECT_A1D_ELEM(pix_count, n) << std::endl; 
+	    }
+	    FOR_ALL_ELEMENTS_IN_FFTW_TRANSFORM(fourier_mask)
+	    {
+		    p2 = kp * kp + jp * jp + ip * ip;
+		    p = (int)sqrt(p2);
+		    if (p > (XSIZE(pix_count) - 1)){continue;}
+		    DIRECT_A3D_ELEM(fourier_mask, k, i, j).real *= DIRECT_A1D_ELEM(intensity_scale_factor, p); 
+		    //std::cout << "shell " << p << " " << k << " " << i << " " << j << " " <<  DIRECT_A3D_ELEM(fourier_mask, k, i, j).real << "   " << DIRECT_A3D_ELEM(fourier_mask, k, i, j).imag << "i" << std::endl;
+	    }
+		std::cout << "fourier mask normalization done!" << std::endl;
+    }
+//The fourier mask should be normalized within each fourier shell
+//
+    rms_beta = textToFloat(parser.getOption("--rms_beta", "the beta value for rms prop", ""));
     mymodel.pixel_size = textToFloat(parser.getOption("--angpix", "Pixel size (in Angstroms)", "-1"));
 	mymodel.tau2_fudge_factor = textToFloat(parser.getOption("--tau2_fudge", "Regularisation parameter (values higher than 1 give more weight to the data)", "1"));
 	mymodel.nr_classes = textToInteger(parser.getOption("--K", "Number of references to be refined", "1"));
@@ -436,10 +514,49 @@ void MlOptimiser::parseInitial(int argc, char **argv)
 	fn_local_symmetry = parser.getOption("--local_symmetry", "Local symmetry description file containing list of masks and their operators", "None");
     do_split_random_halves = parser.checkOption("--split_random_halves", "Refine two random halves of the data completely separately");
 	low_resol_join_halves = textToFloat(parser.getOption("--low_resol_join_halves", "Resolution (in Angstrom) up to which the two random half-reconstructions will not be independent to prevent diverging orientations","-1"));
+    std::vector<std::string> mix_split;
+    splitString(mix_ratio, ":", mix_split, true);
+    std::vector<std::string> mix_second_split;
+    for (int i = 0; i < mix_split.size(); i++){
+	splitString(mix_split[i], ",", mix_second_split, true);
+	for (iter = 0; iter < textToInteger(mix_second_split[1]); iter++){
+	    mix_ratio_vec.push_back(textToFloat(mix_second_split[0]));
+	}
+    }
+
+
+    splitString(mix_res, ":", mix_split, true);
+    for (int i = 0; i < mix_split.size(); i++){
+	splitString(mix_split[i], ",", mix_second_split, true);
+	for (int j = 0; j < textToInteger(mix_second_split[2]); j++){
+	    mix_res_low_vec.push_back(textToFloat(mix_second_split[0]));
+	    mix_res_high_vec.push_back(textToFloat(mix_second_split[1]));
+	    std::cout << "iter " << j << " mix low " << mix_res_low_vec[j] << std::endl;	
+	    std::cout << "iter " << j << " mix high " <<  mix_res_high_vec[j] << std::endl;	
+	}
+    }
+
+    splitString(ftmask_res, ":", mix_split, true);
+    for (int i = 0; i < mix_split.size(); i++){
+	splitString(mix_split[i], ",", mix_second_split, true);
+	for (int j = 0; j < textToInteger(mix_second_split[2]); j++){
+	    ftmask_res_low_vec.push_back(textToFloat(mix_second_split[0]));
+	    ftmask_res_high_vec.push_back(textToFloat(mix_second_split[1]));
+	    //std::cout << "iter " << j << " mix low " << mix_res_low_vec[j] << std::endl;	
+	    //std::cout << "iter " << j << " mix high " <<  mix_res_high_vec[j] << std::endl;	
+	}
+    }
+
+
 
 	// Initialisation
 	int init_section = parser.addSection("Initialisation");
 	fn_ref = parser.getOption("--ref", "Image, stack or star-file with the reference(s). (Compulsory for 3D refinement!)", "None");
+	// Modified by ZhouQ, for invariant ref
+	do_invariantref = parser.checkOption("--invariantref", "Perform alignment with invariant references? The references will be always arbitrarily lowpass filtered at ini_high.");
+	// Modified by Gaoxing, for mask class
+	mask_class = parser.getOption("--mask_class", "only apply solvent masks on these classes?", "");
+	//std::cout << "mask_class is now " << mask_class  << std::endl;
 	is_3d_model = parser.checkOption("--denovo_3dref", "Make an initial 3D model from randomly oriented 2D particles");
 	mymodel.sigma2_offset = textToFloat(parser.getOption("--offset", "Initial estimated stddev for the origin offsets", "3"));
 	mymodel.sigma2_offset *= mymodel.sigma2_offset;
@@ -1931,6 +2048,9 @@ void MlOptimiser::calculateSumOfPowerSpectraAndAverageImage(MultidimArray<RFLOAT
 				RFLOAT tilt = (mymodel.ref_dim == 2) ? 0. :rnd_unif() * 180.;
 				RFLOAT psi  = rnd_unif() * 360.;
 				int iclass  = rnd_unif() * mymodel.nr_classes;
+				if (iclass >= mymodel.nr_classes){
+					iclass -= 1;
+				}	
 				Matrix2D<RFLOAT> A;
 				Euler_angles2matrix(rot, tilt, psi, A, true);
 
@@ -2575,6 +2695,34 @@ void MlOptimiser::expectation()
 		{
 			MlDeviceBundle* b = ((MlDeviceBundle*)cudaDeviceBundles[i]);
 			b->syncAllBackprojects();
+			//Gaoxing
+			//This part is added for GD refinements.
+			//The first pass only calculates mean and std.
+			/*
+			for (int j = 0; j < b->cudaProjectors.size(); j++)
+			{
+				unsigned long s = wsum_model.BPref[j].data.nzyxdim;
+				XFLOAT *reals = new XFLOAT[s];
+				XFLOAT *imags = new XFLOAT[s];
+				XFLOAT *weights = new XFLOAT[s];
+
+				b->cudaBackprojectors[j].getMdlData(reals, imags, weights);
+
+				for (unsigned long n = 0; n < s; n++)
+				{
+					wsum_model.BPref[j].data.data[n].real += (RFLOAT) reals[n];
+					wsum_model.BPref[j].data.data[n].imag += (RFLOAT) imags[n];
+					wsum_model.BPref[j].weight.data[n] += (RFLOAT) weights[n];
+				}
+
+				delete [] reals;
+				delete [] imags;
+				delete [] weights;
+				//Do not do clearing on the first pass...
+				b->cudaProjectors[j].clear();
+				b->cudaBackprojectors[j].clear();
+				b->coarseProjectionPlans[j].clear();
+			}*/
 
 			for (int j = 0; j < b->cudaProjectors.size(); j++)
 			{
@@ -3907,20 +4055,70 @@ void MlOptimiser::solventFlatten()
 		if (!Isolvent2().sameShape(Isolvent()))
 			REPORT_ERROR("MlOptimiser::solventFlatten ERROR: second solvent mask is of incorrect size.");
 	}
-
-	for (int iclass = 0; iclass < mymodel.nr_classes; iclass++)
+	//Gaoxing
+	if (mask_class != "")
 	{
+        	splitString(mask_class, ",", mask_class_split, true);	
+		int iclass = 0;
+		for (int i = 0; i < mask_class.size(); i++)
+		{
+			//iclass = textToInteger(mask_class_split[i]);
+			std::cout << "Now masking class " << iclass << std::endl;
 
-		// Then apply the expanded solvent mask to the map
-		mymodel.Iref[iclass] *= Isolvent();
+			// Then apply the expanded solvent mask to the map
+			//Gaoxing
+			if (do_post_mask)
+			{
+				std::cout << "Applying post masking...." << std::endl;
+				applyBFactorToMap(mymodel.Iref[iclass], bpost_mask, mymodel.pixel_size);
+			}
 
-		// Apply a second solvent mask if necessary
-		// This may for example be useful to set the interior of icosahedral viruses to a constant density value that is higher than the solvent
-		// Invert the solvent mask, so that an input mask can be given where 1 is the masked area and 0 is protein....
-		if (!fn_mask2.contains("None"))
-			softMaskOutsideMap(mymodel.Iref[iclass], Isolvent2(), true);
+			mymodel.Iref[iclass] *= Isolvent();
+			//Gaoxing
+			if (do_post_mask)
+			{
+				std::cout << "Resuming post masking...." << std::endl;
+				RFLOAT tmp_bpost_mask = -1.0 * bpost_mask;
+				applyBFactorToMap(mymodel.Iref[iclass], tmp_bpost_mask, mymodel.pixel_size);
+			}
 
-	} // end for iclass
+			// Apply a second solvent mask if necessary
+			// This may for example be useful to set the interior of icosahedral viruses to a constant density value that is higher than the solvent
+			// Invert the solvent mask, so that an input mask can be given where 1 is the masked area and 0 is protein....
+			if (!fn_mask2.contains("None"))
+				softMaskOutsideMap(mymodel.Iref[iclass], Isolvent2(), true);
+
+		} // end for iclass
+	}
+	else{
+		for (int iclass = 0; iclass < mymodel.nr_classes; iclass++)
+		{
+
+			// Then apply the expanded solvent mask to the map
+			//Gaoxing
+			if (do_post_mask)
+			{
+				std::cout << "Applying post masking...." << std::endl;
+				applyBFactorToMap(mymodel.Iref[iclass], bpost_mask, mymodel.pixel_size);
+			}
+
+			mymodel.Iref[iclass] *= Isolvent();
+			//Gaoxing
+			if (do_post_mask)
+			{
+				std::cout << "Resuming post masking...." << std::endl;
+				RFLOAT tmp_bpost_mask = -1.0 * bpost_mask;
+				applyBFactorToMap(mymodel.Iref[iclass], tmp_bpost_mask, mymodel.pixel_size);
+			}
+
+			// Apply a second solvent mask if necessary
+			// This may for example be useful to set the interior of icosahedral viruses to a constant density value that is higher than the solvent
+			// Invert the solvent mask, so that an input mask can be given where 1 is the masked area and 0 is protein....
+			if (!fn_mask2.contains("None"))
+				softMaskOutsideMap(mymodel.Iref[iclass], Isolvent2(), true);
+
+		} // end for iclass
+	}
 #ifdef DEBUG
 	std::cerr << "Leaving MlOptimiser::solventFlatten" << std::endl;
 #endif
@@ -8021,8 +8219,12 @@ void MlOptimiser::checkConvergence(bool myverb)
 
 	if (do_realign_movies)
 		return;
+	if (do_always_refine)
+	{
+		has_converged = false;
+	}
 
-	if ( has_fine_enough_angular_sampling && nr_iter_wo_resol_gain >= MAX_NR_ITER_WO_RESOL_GAIN && nr_iter_wo_large_hidden_variable_changes >= MAX_NR_ITER_WO_LARGE_HIDDEN_VARIABLE_CHANGES )
+	else if ( has_fine_enough_angular_sampling && nr_iter_wo_resol_gain >= MAX_NR_ITER_WO_RESOL_GAIN && nr_iter_wo_large_hidden_variable_changes >= MAX_NR_ITER_WO_LARGE_HIDDEN_VARIABLE_CHANGES )
 	{
 		has_converged = true;
 		do_join_random_halves = true;

@@ -1533,6 +1533,15 @@ public:
                 STARTINGY(*this) == STARTINGY(op) &&
                 STARTINGZ(*this) == STARTINGZ(op));
     }
+    //Gaoxing 20200326
+    template <typename T1>
+    inline bool sameShapeSimple(const MultidimArray<T1>& op) const
+    {
+        return (XSIZE(*this) == XSIZE(op) &&
+                YSIZE(*this) == YSIZE(op) &&
+                ZSIZE(*this) == ZSIZE(op) 
+                );
+    }
 
 
     /** Outside for 3D matrices
